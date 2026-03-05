@@ -1,0 +1,59 @@
+{
+    "hero": {
+        "title": "Join the ",
+        "title_highlight": "WareBi",
+        "title_suffix": " adventure",
+        "subtitle": "We're looking for brilliant minds who want to build tomorrow's digital."
+    },
+    "culture": {
+        "title": "Our ",
+        "title_highlight": "culture",
+        "subtitle": "What defines us and makes WareBi a unique place to work.",
+        "autonomy": {
+            "title": "Autonomy and responsibility",
+            "description": "We trust every team member. You have the freedom to take initiative and shape your work."
+        },
+        "learning": {
+            "title": "Continuous learning",
+            "description": "Training budget, dedicated tech watch time, conferences. We invest in your professional growth."
+        },
+        "collaboration": {
+            "title": "Collaboration and transparency",
+            "description": "No heavy hierarchy. Direct communication, collective decisions, regular feedback."
+        },
+        "remote": {
+            "title": "Remote-friendly",
+            "description": "Work from wherever you want. Paris office available, but not mandatory. Total flexibility."
+        }
+    },
+    "jobs": {
+        "title": "Open ",
+        "title_highlight": "positions",
+        "subtitle": "Join us to work on exciting projects and make a difference.",
+        "apply": "Apply"
+    },
+    "spontaneous": {
+        "title": "Spontaneous ",
+        "title_highlight": "application",
+        "subtitle": "Can't find the right position? Send us your spontaneous application. We carefully review all applications.",
+        "checklist": {
+            "cv": "Resume and cover letter",
+            "portfolio": "Portfolio or projects (if applicable)",
+            "linkedin": "LinkedIn or personal website"
+        },
+        "name_placeholder": "Full name *",
+        "email_placeholder": "Email *",
+        "linkedin_placeholder": "LinkedIn or personal website",
+        "message_placeholder": "Your message...",
+        "cv_upload": "Attach your resume (PDF)",
+        "submit": "Send my application",
+        "success_title": "Application sent!",
+        "success_message": "We'll get back to you within 7 business days."
+    },
+    "partner": {
+        "title": "Become a ",
+        "title_highlight": "partner",
+        "subtitle": "Are you a consulting firm, agency or freelancer? Let's collaborate to offer the best to our clients.",
+        "cta": "Contact us"
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "hero": {
+        "title_1": "Ce qu'on a construit.",
+        "title_highlight": "Ce qu'on a prouvé.",
+        "subtitle": "Chaque projet est une histoire de transformation. Voici les nôtres."
+    },
+    "filter_all": "Tous",
+    "categories": {
+        "data_bi": "Data & BI",
+        "dev": "Développement",
+        "analytics": "Analytics",
+        "automation": "Automatisation",
+        "ai": "IA"
+    },
+    "dialog": {
+        "result_label": "Résultat clé :",
+        "context": "Le contexte",
+        "challenge": "Le défi",
+        "solution": "Notre solution",
+        "technologies": "Technologies utilisées",
+        "cta": "Discuter de mon projet"
+    },
+    "items": {
+        "gcp": {
+            "title": "Migration Data vers GCP + Dashboards Power BI",
+            "client": "PME secteur logistique",
+            "shortDesc": "Centralisation des données et création de dashboards connectés",
+            "fullDesc": "Entreprise avec données éparpillées dans des fichiers Excel et bases legacy. Nous avons centralisé toutes les données sur BigQuery, créé des pipelines ETL automatisés et développé des dashboards Power BI connectés en temps réel.",
+            "challenge": "Les données étaient dispersées dans multiples fichiers Excel et systèmes legacy, rendant impossible une vision unifiée pour la direction.",
+            "solution": "Migration complète vers BigQuery, orchestration avec Dataflow, création de dashboards Power BI interactifs et formation des équipes.",
+            "result": "-60% de temps de reporting, décisions 3x plus rapides",
+            "category": "Data & BI"
+        },
+        "airflow": {
+            "title": "Automatisation pipelines data avec Airflow",
+            "client": "Entreprise e-commerce",
+            "shortDesc": "Orchestration complète des traitements de données",
+            "fullDesc": "Traitements manuels quotidiens mobilisant une équipe entière. Nous avons automatisé et fiabilisé les traitements récurrents avec Airflow.",
+            "challenge": "Une équipe de 3 personnes passait 20h par semaine sur des traitements manuels de données, sources d'erreurs et de retard.",
+            "solution": "Orchestration avec Airflow, DAGs automatisés, monitoring et alerting en temps réel, documentation complète.",
+            "result": "20h de travail manuel éliminées par semaine, 0 erreur de traitement",
+            "category": "Automatisation"
+        },
+        "saas": {
+            "title": "Développement plateforme SaaS",
+            "client": "Startup fintech",
+            "shortDesc": "Application web complète avec modèle de leasing",
+            "fullDesc": "Client souhaitant digitaliser son activité avec un modèle de leasing. Nous avons conçu une application complète, scalable, avec gestion des paiements.",
+            "challenge": "Créer une plateforme from scratch avec gestion complexe des contrats de leasing, paiements récurrents et tableau de bord client.",
+            "solution": "Application web full-stack avec Laravel, API REST complète, intégration Stripe pour les paiements, architecture cloud scalable.",
+            "result": "Plateforme live avec 500+ utilisateurs actifs en 3 mois",
+            "category": "Développement"
+        },
+        "analytics_project": {
+            "title": "Solution analytics pour le marketing digital",
+            "client": "Agence marketing",
+            "shortDesc": "Tracking et optimisation des campagnes",
+            "fullDesc": "Équipe marketing sans visibilité sur le ROI de ses campagnes. Nous avons mis en place un système complet de tracking et d'optimisation.",
+            "challenge": "Aucune visibilité sur le ROI des campagnes, impossible d'optimiser les budgets marketing efficacement.",
+            "solution": "Setup Google Analytics 4 avancé, dashboards de suivi personnalisés, tracking custom des conversions, reporting automatisé.",
+            "result": "+35% de ROI sur les campagnes grâce aux insights data",
+            "category": "Analytics"
+        },
+        "chatbot": {
+            "title": "Chatbot IA pour le support client",
+            "client": "SaaS B2B",
+            "shortDesc": "Automatisation du support de niveau 1",
+            "fullDesc": "Support client débordé par le volume de demandes récurrentes. Nous avons développé un chatbot IA intelligent.",
+            "challenge": "L'équipe support passait 70% de son temps sur des questions récurrentes, retardant les demandes complexes.",
+            "solution": "Chatbot basé sur LLM, intégration avec la base de connaissances, escalation intelligente vers les humains.",
+            "result": "70% des demandes support de niveau 1 gérées automatiquement",
+            "category": "IA"
+        },
+        "warehouse": {
+            "title": "Data warehouse moderne",
+            "client": "Retail chain",
+            "shortDesc": "Modernisation de l'infrastructure data",
+            "fullDesc": "Infrastructure data obsolète ne supportant pas la croissance. Migration vers une architecture moderne cloud-native.",
+            "challenge": "Temps de requête de plusieurs minutes, données non fiables, impossible de scaler avec la croissance.",
+            "solution": "Architecture cloud-native avec BigQuery, dbt pour la transformation, monitoring complet, gouvernance des données.",
+            "result": "Temps de requête divisé par 10, 99.9% de disponibilité",
+            "category": "Data & BI"
+        }
+    }
+}

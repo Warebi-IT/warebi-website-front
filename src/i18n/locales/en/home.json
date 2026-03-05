@@ -1,0 +1,81 @@
+{
+    "hero": {
+        "badge": "Digital & Data Expertise",
+        "title_1": "Your ",
+        "title_highlight_1": "data",
+        "title_2": "Our ",
+        "title_highlight_2": "expertise",
+        "title_3": "Your ",
+        "title_highlight_3": "advantage",
+        "subtitle": "WareBi helps businesses with their digital transformation — from data to artificial intelligence, we build solutions that make a difference.",
+        "cta_primary": "Discover our services",
+        "cta_secondary": "Contact us",
+        "tech_label": "Technologies we master",
+        "scroll": "Learn more"
+    },
+    "services": {
+        "title": "5 areas of expertise, one mission:",
+        "title_highlight": " your digital success",
+        "items": {
+            "data_bi": {
+                "title": "Data & Business Intelligence",
+                "description": "Turn your data into strategic decisions with interactive dashboards and advanced analytics."
+            },
+            "dev": {
+                "title": "Software & Web Development",
+                "description": "Custom-built, robust and scalable applications to meet your specific needs."
+            },
+            "analytics": {
+                "title": "Analytics & Digital Marketing",
+                "description": "Measure, optimize and perform with a data-driven approach to your marketing."
+            },
+            "automation": {
+                "title": "Process Automation",
+                "description": "Eliminate repetitive tasks and gain efficiency with intelligent automation."
+            },
+            "ai": {
+                "title": "Artificial Intelligence",
+                "description": "AI at your service: predictive models, chatbots and ML solutions."
+            }
+        },
+        "learn_more": "Learn more"
+    },
+    "stats": {
+        "projects": "Projects delivered",
+        "clients": "Clients supported",
+        "satisfaction": "Satisfaction rate",
+        "expertise": "Areas of expertise"
+    },
+    "projects": {
+        "title": "What we've built",
+        "title_highlight": " recently",
+        "subtitle": "Discover our recent projects and the impact they had on our clients.",
+        "see_all": "See all our work",
+        "items": {
+            "gcp": {
+                "title": "Data Migration to GCP + Power BI Dashboards",
+                "client": "SME logistics sector",
+                "description": "Centralization of scattered data and creation of connected dashboards for a unified view.",
+                "result": "-60% reporting time"
+            },
+            "airflow": {
+                "title": "Data pipeline automation with Airflow",
+                "client": "E-commerce company",
+                "description": "Complete data processing orchestration with monitoring and alerting.",
+                "result": "20h/week saved"
+            },
+            "saas": {
+                "title": "SaaS platform development",
+                "client": "Fintech startup",
+                "description": "Complete web application with integrated leasing model and subscription system.",
+                "result": "Live in 3 months"
+            }
+        }
+    },
+    "cta": {
+        "title": "Ready to transform your business",
+        "title_highlight": " with data?",
+        "subtitle": "Let's discuss your project. First consultation free with no commitment.",
+        "button": "Book a meeting"
+    }
+}

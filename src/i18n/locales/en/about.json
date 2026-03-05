@@ -1,0 +1,78 @@
+{
+    "hero": {
+        "title_1": "We are ",
+        "title_highlight_1": "WareBi.",
+        "title_2": "We turn data",
+        "title_3": "into ",
+        "title_highlight_2": "competitive advantage.",
+        "subtitle": "WareBi was born from a conviction: data is the new oil, but only if you know how to leverage it. Our mission is to help businesses make the most of their digital assets through data expertise, custom development and artificial intelligence."
+    },
+    "story": {
+        "title": "Our story & ",
+        "title_highlight": "vision",
+        "p1": "Founded in 2020, WareBi is the result of several years of experience in data consulting and software development. We noticed that many companies were accumulating data without knowing how to create value from it.",
+        "p2": "Our vision is simple: make data accessible and actionable for all businesses, from SMEs to large groups. We firmly believe that technical expertise must serve business understanding.",
+        "p3": "Today, WareBi supports more than 15 clients on various projects: data migration, application development, process automation and AI integration.",
+        "years_number": "5",
+        "years_label": "years of expertise",
+        "years_sub": "at your service"
+    },
+    "process": {
+        "title": "How we ",
+        "title_highlight": "work",
+        "subtitle": "A proven methodology for measurable results at every step.",
+        "steps": {
+            "understand": {
+                "number": "01",
+                "title": "Understand",
+                "description": "We analyze your context, data and objectives to fully understand your needs."
+            },
+            "build": {
+                "number": "02",
+                "title": "Build",
+                "description": "We develop the right technical solution, using an agile approach with regular iterations."
+            },
+            "measure": {
+                "number": "03",
+                "title": "Measure",
+                "description": "We track KPIs and continually optimize to maximize the impact of our solutions."
+            },
+            "support": {
+                "number": "04",
+                "title": "Support",
+                "description": "We stay by your side to evolve the solution and address your new challenges."
+            }
+        }
+    },
+    "team": {
+        "title": "The experts behind ",
+        "title_highlight": "WareBi",
+        "subtitle": "A team passionate about tech and dedicated to your success."
+    },
+    "values": {
+        "title": "Our ",
+        "title_highlight": "values",
+        "innovation": {
+            "title": "Innovation",
+            "description": "Always looking for the best technologies to offer cutting-edge solutions."
+        },
+        "expertise": {
+            "title": "Expertise",
+            "description": "Every project is led by confirmed specialists with years of experience."
+        },
+        "partnership": {
+            "title": "Partnership",
+            "description": "We don't deliver a product, we build a lasting relationship based on trust."
+        },
+        "rigor": {
+            "title": "Rigor",
+            "description": "Data-driven approach, clean code, documented deliverables and proven processes."
+        }
+    },
+    "badges": {
+        "gcp": "GCP Certified Expertise",
+        "microsoft": "Microsoft Partner",
+        "powerbi": "Power BI Certified",
+        "iso": "ISO 27001"
+    }
+}

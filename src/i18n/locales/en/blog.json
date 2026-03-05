@@ -1,0 +1,25 @@
+{
+    "hero": {
+        "title": "Insights & ",
+        "title_highlight": "Expertise",
+        "subtitle": "Our analyses, guides and experience reports on data, dev and AI."
+    },
+    "filter_all": "All",
+    "categories": {
+        "data": "Data",
+        "dev": "Dev",
+        "analytics": "Analytics",
+        "ai": "AI",
+        "automation": "Automation"
+    },
+    "read_article": "Read article",
+    "load_more": "Load more articles",
+    "empty": "No articles in this category yet.",
+    "newsletter": {
+        "title": "Stay up to date with the ",
+        "title_highlight": "latest trends",
+        "subtitle": "Subscribe to our newsletter to receive our best articles directly in your inbox.",
+        "placeholder": "Your professional email",
+        "button": "Subscribe"
+    }
+}

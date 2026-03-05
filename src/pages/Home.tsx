@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Database, 
-  Code2, 
-  TrendingUp, 
-  Settings2, 
+import {
+  Database,
+  Code2,
+  TrendingUp,
+  Settings2,
   Brain,
   ArrowDown,
   ChevronRight
 } from 'lucide-react';
-import ServiceCard from '../components/ServiceCard';
-import ProjectCard from '../components/ProjectCard';
-import AnimatedCounter from '../components/AnimatedCounter';
+import ServiceCard from '../components/molecules/ServiceCard/ServiceCard';
+import ProjectCard from '../components/molecules/ProjectCard/ProjectCard';
+import AnimatedCounter from '../components/atoms/AnimatedCounter/AnimatedCounter';
 
 const services = [
   {
@@ -90,7 +90,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 grid-overlay opacity-30" />
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="text-center">
             <motion.div
@@ -128,8 +128,8 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-lg lg:text-xl text-text-secondary max-w-2xl mx-auto mb-10"
             >
-              WareBi accompagne les entreprises dans leur transformation digitale — 
-              de la data à l'intelligence artificielle, nous construisons les solutions 
+              WareBi accompagne les entreprises dans leur transformation digitale —
+              de la data à l'intelligence artificielle, nous construisons les solutions
               qui font la différence.
             </motion.p>
 
@@ -275,7 +275,7 @@ export default function Home() {
       <section className="relative py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark-surface to-dark" />
         <div className="absolute inset-0 grid-overlay opacity-20" />
-        
+
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

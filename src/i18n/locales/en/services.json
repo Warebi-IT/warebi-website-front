@@ -1,0 +1,83 @@
+{
+    "hero": {
+        "title": "Complete digital solutions,",
+        "title_highlight": "from data to AI",
+        "subtitle": "Every business is unique. We build the solution that fits your needs exactly."
+    },
+    "technologies_label": "Technologies",
+    "result_label": "Result:",
+    "items": {
+        "data_bi": {
+            "title": "Data & Business Intelligence",
+            "tagline": "Your data has answers. We help you ask the right questions.",
+            "description": "Transform your raw data into actionable insights. We design complete Business Intelligence solutions, from collection to visualization.",
+            "features": [
+                "Data collection, structuring and cleaning",
+                "Analysis and exploitation for decision-making",
+                "Interactive dashboard creation (Power BI, GCP Looker)",
+                "Database migration and integration (PostgreSQL, BigQuery)",
+                "Real-time reporting and KPI monitoring solutions"
+            ],
+            "result": "A client reduced their reporting time by 60% thanks to our automated dashboards."
+        },
+        "dev": {
+            "title": "Software & Web Development",
+            "tagline": "Clean code, applications that last.",
+            "description": "Custom, robust and scalable applications. From architecture to deployment, we build solutions that meet your exact needs.",
+            "features": [
+                "Custom web application design",
+                "Specialized business software development",
+                "API creation and technical integrations",
+                "Responsive mobile and web applications",
+                "Technical architecture and consulting"
+            ],
+            "result": "Development of a complete SaaS platform with integrated leasing model."
+        },
+        "analytics": {
+            "title": "Analytics & Digital Marketing",
+            "tagline": "Every click tells a story. We help you read it.",
+            "description": "Measure, optimize and perform. Our data-driven approach to digital marketing enables informed decisions and improved ROI.",
+            "features": [
+                "Audience measurement and performance analysis",
+                "Marketing campaign tracking and monitoring",
+                "SEO (organic search) and SEA (paid search)",
+                "Marketing reporting and tracking dashboards",
+                "Conversion and ROI optimization"
+            ],
+            "result": "+35% organic traffic in 6 months with a data-driven SEO strategy."
+        },
+        "automation": {
+            "title": "Process Automation",
+            "tagline": "What's repetitive should be automated. Period.",
+            "description": "Eliminate manual tasks and gain efficiency. We design automated pipelines that process your data reliably and at scale.",
+            "features": [
+                "Advanced SQL scripts to automate data processing",
+                "Data pipeline orchestration (Airflow DAGs)",
+                "Flow automation with Dataflow and Cloud Scheduler",
+                "Industrialization of recurring processes",
+                "Quality testing and automated processing monitoring"
+            ],
+            "result": "Complete automation of a data pipeline reducing 20h of manual work to 0."
+        },
+        "ai": {
+            "title": "Artificial Intelligence",
+            "tagline": "AI is not the future. It's now. And we'll take you there.",
+            "description": "Integrate artificial intelligence into your business. From predictive models to chatbots, we develop AI solutions tailored to your needs.",
+            "features": [
+                "AI solutions for business optimization",
+                "Predictive models and advanced analytics",
+                "Intelligent chatbot implementation",
+                "Open-source model integration (Qwen, LLMs)",
+                "Intelligent business process automation",
+                "Machine learning solutions tailored to client needs"
+            ],
+            "result": "Deployment of an AI chatbot handling 70% of level 1 support requests."
+        }
+    },
+    "cta": {
+        "title": "Have a specific need?",
+        "title_highlight": " Let's discuss.",
+        "subtitle": "Every project is unique. Contact us for a free, no-commitment quote.",
+        "button": "Request a free quote"
+    }
+}

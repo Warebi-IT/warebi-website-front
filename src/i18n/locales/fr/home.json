@@ -1,0 +1,81 @@
+{
+    "hero": {
+        "badge": "Expertise Digitale & Data",
+        "title_1": "Vos ",
+        "title_highlight_1": "données",
+        "title_2": "Notre ",
+        "title_highlight_2": "expertise",
+        "title_3": "Votre ",
+        "title_highlight_3": "avantage",
+        "subtitle": "WareBi accompagne les entreprises dans leur transformation digitale — de la data à l'intelligence artificielle, nous construisons les solutions qui font la différence.",
+        "cta_primary": "Découvrir nos services",
+        "cta_secondary": "Nous contacter",
+        "tech_label": "Technologies maîtrisées",
+        "scroll": "En savoir plus"
+    },
+    "services": {
+        "title": "5 expertises, une seule mission :",
+        "title_highlight": " votre succès digital",
+        "items": {
+            "data_bi": {
+                "title": "Data & Business Intelligence",
+                "description": "Transformez vos données en décisions stratégiques avec des tableaux de bord interactifs et des analyses avancées."
+            },
+            "dev": {
+                "title": "Développement Logiciel & Web",
+                "description": "Des applications sur mesure, robustes et scalables pour répondre à vos besoins spécifiques."
+            },
+            "analytics": {
+                "title": "Analytics & Marketing Digital",
+                "description": "Mesurez, optimisez et performez avec une approche data-driven de votre marketing."
+            },
+            "automation": {
+                "title": "Automatisation de Processus",
+                "description": "Éliminez les tâches répétitives et gagnez en efficacité avec l'automatisation intelligente."
+            },
+            "ai": {
+                "title": "Intelligence Artificielle",
+                "description": "L'IA au service de votre business : modèles prédictifs, chatbots et solutions ML."
+            }
+        },
+        "learn_more": "En savoir plus"
+    },
+    "stats": {
+        "projects": "Projets livrés",
+        "clients": "Clients accompagnés",
+        "satisfaction": "Taux de satisfaction",
+        "expertise": "Domaines d'expertise"
+    },
+    "projects": {
+        "title": "Ce qu'on a construit",
+        "title_highlight": " récemment",
+        "subtitle": "Découvrez nos projets récents et l'impact qu'ils ont eu sur nos clients.",
+        "see_all": "Voir toutes nos réalisations",
+        "items": {
+            "gcp": {
+                "title": "Migration Data vers GCP + Dashboards Power BI",
+                "client": "PME secteur logistique",
+                "description": "Centralisation des données dispersées et création de dashboards connectés pour une vision unifiée.",
+                "result": "-60% temps reporting"
+            },
+            "airflow": {
+                "title": "Automatisation pipelines data avec Airflow",
+                "client": "Entreprise e-commerce",
+                "description": "Orchestration complète des traitements de données avec monitoring et alerting.",
+                "result": "20h/semaine économisées"
+            },
+            "saas": {
+                "title": "Développement plateforme SaaS",
+                "client": "Startup fintech",
+                "description": "Application web complète avec modèle de leasing intégré et système d'abonnement.",
+                "result": "Live en 3 mois"
+            }
+        }
+    },
+    "cta": {
+        "title": "Prêt à transformer votre business",
+        "title_highlight": " avec la data ?",
+        "subtitle": "Discutons de votre projet. Premier échange gratuit et sans engagement.",
+        "button": "Prendre rendez-vous"
+    }
+}

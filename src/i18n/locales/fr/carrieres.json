@@ -1,0 +1,58 @@
+{
+    "hero": {
+        "title": "Rejoignez l'aventure ",
+        "title_highlight": "WareBi",
+        "subtitle": "On cherche des esprits brillants qui veulent construire le digital de demain."
+    },
+    "culture": {
+        "title": "Notre ",
+        "title_highlight": "culture",
+        "subtitle": "Ce qui nous définit et fait de WareBi un endroit unique pour travailler.",
+        "autonomy": {
+            "title": "Autonomie et responsabilité",
+            "description": "On fait confiance à chaque membre de l'équipe. Vous avez la liberté de prendre des initiatives et de façonner votre travail."
+        },
+        "learning": {
+            "title": "Apprentissage continu",
+            "description": "Budget formation, temps dédié à la veille tech, conférences. On investit dans votre croissance professionnelle."
+        },
+        "collaboration": {
+            "title": "Collaboration et transparence",
+            "description": "Pas de hiérarchie lourde. Communication directe, décisions collectives, feedback régulier."
+        },
+        "remote": {
+            "title": "Remote-friendly",
+            "description": "Travaillez d'où vous voulez. Bureau à Paris disponible, mais pas obligatoire. Flexibilité totale."
+        }
+    },
+    "jobs": {
+        "title": "Opportunités ",
+        "title_highlight": "ouvertes",
+        "subtitle": "Rejoignez-nous pour travailler sur des projets passionnants et faire la différence.",
+        "apply": "Postuler"
+    },
+    "spontaneous": {
+        "title": "Candidature ",
+        "title_highlight": "spontanée",
+        "subtitle": "Vous ne trouvez pas le poste qui vous correspond ? Envoyez-nous votre candidature spontanée. On étudie toutes les candidatures avec attention.",
+        "checklist": {
+            "cv": "CV et lettre de motivation",
+            "portfolio": "Portfolio ou projets (si applicable)",
+            "linkedin": "LinkedIn ou site personnel"
+        },
+        "name_placeholder": "Nom complet *",
+        "email_placeholder": "Email *",
+        "linkedin_placeholder": "LinkedIn ou site personnel",
+        "message_placeholder": "Votre message...",
+        "cv_upload": "Joindre votre CV (PDF)",
+        "submit": "Envoyer ma candidature",
+        "success_title": "Candidature envoyée !",
+        "success_message": "On vous répond dans les 7 jours ouvrés."
+    },
+    "partner": {
+        "title": "Devenir ",
+        "title_highlight": "partenaire",
+        "subtitle": "Vous êtes un cabinet de conseil, une agence ou un indépendant ? Collaborons ensemble pour offrir le meilleur à nos clients.",
+        "cta": "Nous contacter"
+    }
+}

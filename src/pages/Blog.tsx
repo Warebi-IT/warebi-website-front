@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import BlogCard from '../components/BlogCard';
+import BlogCard from '../components/molecules/BlogCard/BlogCard';
 
 const categories = ['Tous', 'Data', 'Dev', 'Analytics', 'IA', 'Automatisation'];
 
@@ -123,11 +123,10 @@ export default function Blog() {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === category
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category
                     ? 'bg-neon text-black'
                     : 'bg-dark-elevated text-text-secondary border border-border hover:border-neon/50 hover:text-white'
-                }`}
+                  }`}
               >
                 {category}
               </button>

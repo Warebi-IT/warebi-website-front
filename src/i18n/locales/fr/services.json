@@ -1,0 +1,83 @@
+{
+    "hero": {
+        "title": "Des solutions digitales complètes,",
+        "title_highlight": "de la data à l'IA",
+        "subtitle": "Chaque entreprise est unique. On construit la solution qui correspond exactement à vos besoins."
+    },
+    "technologies_label": "Technologies",
+    "result_label": "Résultat :",
+    "items": {
+        "data_bi": {
+            "title": "Data & Business Intelligence",
+            "tagline": "Vos données ont des réponses. On vous aide à poser les bonnes questions.",
+            "description": "Transformez vos données brutes en insights actionnables. Nous concevons des solutions de Business Intelligence complètes, de la collecte à la visualisation.",
+            "features": [
+                "Collecte, structuration et nettoyage des données",
+                "Analyse et exploitation pour la prise de décision",
+                "Création de tableaux de bord interactifs (Power BI, GCP Looker)",
+                "Migration et intégration de bases de données (PostgreSQL, BigQuery)",
+                "Solutions de reporting et suivi des KPI en temps réel"
+            ],
+            "result": "Un client a réduit de 60% son temps de reporting grâce à nos dashboards automatisés."
+        },
+        "dev": {
+            "title": "Développement Logiciel & Web",
+            "tagline": "Du code propre, des applications qui durent.",
+            "description": "Des applications sur mesure, robustes et scalables. De l'architecture à la mise en production, nous construisons des solutions qui répondent exactement à vos besoins.",
+            "features": [
+                "Conception d'applications web sur mesure",
+                "Développement de logiciels métier spécialisés",
+                "Création d'API et intégrations techniques",
+                "Applications mobiles et web responsive",
+                "Architecture technique et conseil"
+            ],
+            "result": "Développement d'une plateforme SaaS complète avec modèle de leasing intégré."
+        },
+        "analytics": {
+            "title": "Analytics & Marketing Digital",
+            "tagline": "Chaque clic raconte une histoire. On vous aide à la lire.",
+            "description": "Mesurez, optimisez et performez. Notre approche data-driven du marketing digital vous permet de prendre des décisions éclairées et d'améliorer votre ROI.",
+            "features": [
+                "Mesure d'audience et analyse de performance",
+                "Tracking et monitoring des campagnes marketing",
+                "SEO (référencement naturel) et SEA (publicité en ligne)",
+                "Reporting marketing et tableaux de bord de suivi",
+                "Optimisation des conversions et du ROI"
+            ],
+            "result": "+35% de trafic organique en 6 mois grâce à une stratégie SEO data-driven."
+        },
+        "automation": {
+            "title": "Automatisation de Processus",
+            "tagline": "Ce qui est répétitif devrait être automatisé. Point.",
+            "description": "Éliminez les tâches manuelles et gagnez en efficacité. Nous concevons des pipelines automatisés qui traitent vos données de manière fiable et scalable.",
+            "features": [
+                "Scripts SQL avancés pour automatiser les traitements de données",
+                "Orchestration de pipelines de données (DAGs Airflow)",
+                "Automatisation des flux avec Dataflow et Cloud Scheduler",
+                "Industrialisation des processus récurrents",
+                "Tests qualité et monitoring des traitements automatisés"
+            ],
+            "result": "Automatisation complète d'un pipeline data réduisant 20h de travail manuel à 0."
+        },
+        "ai": {
+            "title": "Intelligence Artificielle",
+            "tagline": "L'IA n'est pas le futur. C'est maintenant. Et on vous y emmène.",
+            "description": "Intégrez l'intelligence artificielle dans votre business. Des modèles prédictifs aux chatbots, nous développons des solutions IA adaptées à vos besoins.",
+            "features": [
+                "Implémentation de solutions IA pour l'optimisation business",
+                "Modèles prédictifs et analytics avancés",
+                "Mise en place de chatbots intelligents",
+                "Intégration de modèles open-source (Qwen, LLMs)",
+                "Automatisation intelligente des processus métier",
+                "Solutions de machine learning adaptées aux besoins clients"
+            ],
+            "result": "Déploiement d'un chatbot IA qui gère 70% des demandes support de niveau 1."
+        }
+    },
+    "cta": {
+        "title": "Un besoin spécifique ?",
+        "title_highlight": " On en discute.",
+        "subtitle": "Chaque projet est unique. Contactez-nous pour un devis gratuit et sans engagement.",
+        "button": "Demander un devis gratuit"
+    }
+}

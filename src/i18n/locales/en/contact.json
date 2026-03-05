@@ -1,0 +1,68 @@
+{
+    "hero": {
+        "title": "Let's talk about your ",
+        "title_highlight": "project",
+        "subtitle": "Whether you have a clear idea or just a need, we're here to discuss. First consultation free."
+    },
+    "form": {
+        "title": "Send us a message",
+        "name": "Full name *",
+        "name_placeholder": "John Doe",
+        "email": "Professional email *",
+        "email_placeholder": "john@company.com",
+        "company": "Company",
+        "company_placeholder": "Your company",
+        "subject": "Subject",
+        "subject_placeholder": "Select a subject",
+        "message": "Message *",
+        "message_placeholder": "Describe your project or needs...",
+        "submit": "Send message",
+        "success_title": "Message sent!",
+        "success_message": "We'll get back to you within 24 business hours."
+    },
+    "subjects": {
+        "data_bi": "Data & BI",
+        "dev": "Development",
+        "analytics": "Analytics",
+        "automation": "Automation",
+        "ai": "AI",
+        "other": "Other"
+    },
+    "info": {
+        "title": "Contact details",
+        "email_label": "Email",
+        "phone_label": "Phone",
+        "location_label": "Location",
+        "location_value": "Paris, France",
+        "linkedin_label": "LinkedIn",
+        "whatsapp_label": "WhatsApp",
+        "whatsapp_cta": "Chat on WhatsApp"
+    },
+    "calendly": {
+        "title": "Prefer a call?",
+        "subtitle": "Book a 30-minute slot directly in our calendar.",
+        "button": "Book a 30-min slot"
+    },
+    "faq": {
+        "title": "Frequently ",
+        "title_highlight": "asked questions",
+        "items": {
+            "cost": {
+                "question": "How much does a project with WareBi cost?",
+                "answer": "Every project is unique. We provide a free quote after an initial discussion to understand your exact needs and offer the most suitable solution."
+            },
+            "timeline": {
+                "question": "What are your timelines?",
+                "answer": "It varies by complexity. A dashboard can be delivered in 2 weeks, a complete application in 2-3 months. We establish a detailed plan at the start of each project."
+            },
+            "remote": {
+                "question": "Do you work remotely?",
+                "answer": "Yes, we work with clients throughout France and internationally. Our collaborative tools make us just as effective remotely as in person."
+            },
+            "small": {
+                "question": "Can we start small?",
+                "answer": "Absolutely. We often recommend starting with a pilot project to validate value before scaling. It's a pragmatic approach that limits risk."
+            }
+        }
+    }
+}

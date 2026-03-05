@@ -1,0 +1,85 @@
+{
+    "hero": {
+        "title_1": "What we've built.",
+        "title_highlight": "What we've proven.",
+        "subtitle": "Every project is a transformation story. Here are ours."
+    },
+    "filter_all": "All",
+    "categories": {
+        "data_bi": "Data & BI",
+        "dev": "Development",
+        "analytics": "Analytics",
+        "automation": "Automation",
+        "ai": "AI"
+    },
+    "dialog": {
+        "result_label": "Key result:",
+        "context": "The context",
+        "challenge": "The challenge",
+        "solution": "Our solution",
+        "technologies": "Technologies used",
+        "cta": "Discuss my project"
+    },
+    "items": {
+        "gcp": {
+            "title": "Data Migration to GCP + Power BI Dashboards",
+            "client": "SME logistics sector",
+            "shortDesc": "Data centralization and connected dashboard creation",
+            "fullDesc": "Company with data scattered across Excel files and legacy databases. We centralized all data on BigQuery, created automated ETL pipelines and developed real-time connected Power BI dashboards.",
+            "challenge": "Data was scattered across multiple Excel files and legacy systems, making a unified view impossible for management.",
+            "solution": "Complete migration to BigQuery, orchestration with Dataflow, interactive Power BI dashboard creation and team training.",
+            "result": "-60% reporting time, 3x faster decisions",
+            "category": "Data & BI"
+        },
+        "airflow": {
+            "title": "Data pipeline automation with Airflow",
+            "client": "E-commerce company",
+            "shortDesc": "Complete data processing orchestration",
+            "fullDesc": "Daily manual processing mobilizing an entire team. We automated and made recurring processes reliable with Airflow.",
+            "challenge": "A team of 3 spent 20h per week on manual data processing, a source of errors and delays.",
+            "solution": "Orchestration with Airflow, automated DAGs, real-time monitoring and alerting, complete documentation.",
+            "result": "20h of manual work eliminated per week, 0 processing errors",
+            "category": "Automation"
+        },
+        "saas": {
+            "title": "SaaS platform development",
+            "client": "Fintech startup",
+            "shortDesc": "Complete web application with leasing model",
+            "fullDesc": "Client wanting to digitize their business with a leasing model. We designed a complete, scalable application with payment management.",
+            "challenge": "Create a platform from scratch with complex leasing contract management, recurring payments and client dashboard.",
+            "solution": "Full-stack web application with Laravel, complete REST API, Stripe integration for payments, scalable cloud architecture.",
+            "result": "Platform live with 500+ active users in 3 months",
+            "category": "Development"
+        },
+        "analytics_project": {
+            "title": "Analytics solution for digital marketing",
+            "client": "Marketing agency",
+            "shortDesc": "Campaign tracking and optimization",
+            "fullDesc": "Marketing team with no visibility on campaign ROI. We implemented a complete tracking and optimization system.",
+            "challenge": "No visibility on campaign ROI, impossible to optimize marketing budgets effectively.",
+            "solution": "Advanced Google Analytics 4 setup, custom tracking dashboards, conversion tracking, automated reporting.",
+            "result": "+35% campaign ROI thanks to data insights",
+            "category": "Analytics"
+        },
+        "chatbot": {
+            "title": "AI Chatbot for customer support",
+            "client": "B2B SaaS",
+            "shortDesc": "Level 1 support automation",
+            "fullDesc": "Customer support overwhelmed by recurring request volume. We developed an intelligent AI chatbot.",
+            "challenge": "The support team spent 70% of their time on recurring questions, delaying complex requests.",
+            "solution": "LLM-based chatbot, knowledge base integration, intelligent escalation to humans.",
+            "result": "70% of level 1 support requests handled automatically",
+            "category": "AI"
+        },
+        "warehouse": {
+            "title": "Modern data warehouse",
+            "client": "Retail chain",
+            "shortDesc": "Data infrastructure modernization",
+            "fullDesc": "Obsolete data infrastructure unable to support growth. Migration to a modern cloud-native architecture.",
+            "challenge": "Query times of several minutes, unreliable data, impossible to scale with growth.",
+            "solution": "Cloud-native architecture with BigQuery, dbt for transformation, complete monitoring, data governance.",
+            "result": "Query time divided by 10, 99.9% availability",
+            "category": "Data & BI"
+        }
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "hero": {
+        "title": "Parlons de votre ",
+        "title_highlight": "projet",
+        "subtitle": "Que vous ayez une idée précise ou juste un besoin, on est là pour en discuter. Premier échange gratuit."
+    },
+    "form": {
+        "title": "Envoyez-nous un message",
+        "name": "Nom complet *",
+        "name_placeholder": "Jean Dupont",
+        "email": "Email professionnel *",
+        "email_placeholder": "jean@entreprise.com",
+        "company": "Entreprise",
+        "company_placeholder": "Votre entreprise",
+        "subject": "Sujet",
+        "subject_placeholder": "Sélectionnez un sujet",
+        "message": "Message *",
+        "message_placeholder": "Décrivez votre projet ou vos besoins...",
+        "submit": "Envoyer le message",
+        "success_title": "Message envoyé !",
+        "success_message": "On vous répond dans les 24h ouvrées."
+    },
+    "subjects": {
+        "data_bi": "Data & BI",
+        "dev": "Développement",
+        "analytics": "Analytics",
+        "automation": "Automatisation",
+        "ai": "IA",
+        "other": "Autre"
+    },
+    "info": {
+        "title": "Nos coordonnées",
+        "email_label": "Email",
+        "phone_label": "Téléphone",
+        "location_label": "Localisation",
+        "location_value": "Paris, France",
+        "linkedin_label": "LinkedIn",
+        "whatsapp_label": "WhatsApp",
+        "whatsapp_cta": "Discuter sur WhatsApp"
+    },
+    "calendly": {
+        "title": "Préférez un appel ?",
+        "subtitle": "Réservez directement un créneau de 30 minutes dans notre agenda.",
+        "button": "Réserver un créneau de 30 min"
+    },
+    "faq": {
+        "title": "Questions ",
+        "title_highlight": "fréquentes",
+        "items": {
+            "cost": {
+                "question": "Combien coûte un projet avec WareBi ?",
+                "answer": "Chaque projet est unique. On établit un devis gratuit après un premier échange pour comprendre vos besoins précis et vous proposer la solution la plus adaptée."
+            },
+            "timeline": {
+                "question": "Quels sont vos délais ?",
+                "answer": "Variable selon la complexité. Un dashboard peut être livré en 2 semaines, une application complète en 2-3 mois. On établit un planning détaillé dès le début du projet."
+            },
+            "remote": {
+                "question": "Travaillez-vous à distance ?",
+                "answer": "Oui, on travaille avec des clients partout en France et à l'international. Nos outils collaboratifs nous permettent d'être aussi efficaces à distance qu'en présentiel."
+            },
+            "small": {
+                "question": "On peut commencer petit ?",
+                "answer": "Absolument. On recommande souvent de démarrer par un projet pilote pour valider la valeur avant de scaler. C'est une approche pragmatique qui limite les risques."
+            }
+        }
+    }
+}
