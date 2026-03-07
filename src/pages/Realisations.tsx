@@ -2,97 +2,52 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { ArrowUpRight, X } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/atoms/ui/dialog';
+import { useTranslation } from 'react-i18next';
 
-const projects = [
-  {
-    id: 1,
-    title: 'Migration Data vers GCP + Dashboards Power BI',
-    client: 'PME secteur logistique',
-    shortDesc: 'Centralisation des données et création de dashboards connectés',
-    fullDesc: 'Entreprise avec données éparpillées dans des fichiers Excel et bases legacy. Nous avons centralisé toutes les données sur BigQuery, créé des pipelines ETL automatisés et développé des dashboards Power BI connectés en temps réel.',
-    challenge: 'Les données étaient dispersées dans multiples fichiers Excel et systèmes legacy, rendant impossible une vision unifiée pour la direction.',
-    solution: 'Migration complète vers BigQuery, orchestration avec Dataflow, création de dashboards Power BI interactifs et formation des équipes.',
-    result: '-60% de temps de reporting, décisions 3x plus rapides',
+const projectKeys = ['gcp', 'airflow', 'saas', 'analytics_project', 'chatbot', 'warehouse'] as const;
+
+const projectAssets: Record<string, { tags: string[]; image: string }> = {
+  gcp: {
     tags: ['BigQuery', 'Dataflow', 'Power BI', 'SQL', 'Python'],
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-    category: 'Data & BI',
   },
-  {
-    id: 2,
-    title: 'Automatisation pipelines data avec Airflow',
-    client: 'Entreprise e-commerce',
-    shortDesc: 'Orchestration complète des traitements de données',
-    fullDesc: 'Traitements manuels quotidiens mobilisant une équipe entière. Nous avons automatisé et fiabilisé les traitements récurrents avec Airflow.',
-    challenge: 'Une équipe de 3 personnes passait 20h par semaine sur des traitements manuels de données, sources d\'erreurs et de retard.',
-    solution: 'Orchestration avec Airflow, DAGs automatisés, monitoring et alerting en temps réel, documentation complète.',
-    result: '20h de travail manuel éliminées par semaine, 0 erreur de traitement',
+  airflow: {
     tags: ['Airflow', 'Python', 'SQL', 'Cloud Scheduler'],
     image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80',
-    category: 'Automatisation',
   },
-  {
-    id: 3,
-    title: 'Développement plateforme SaaS',
-    client: 'Startup fintech',
-    shortDesc: 'Application web complète avec modèle de leasing',
-    fullDesc: 'Client souhaitant digitaliser son activité avec un modèle de leasing. Nous avons conçu une application complète, scalable, avec gestion des paiements.',
-    challenge: 'Créer une plateforme from scratch avec gestion complexe des contrats de leasing, paiements récurrents et tableau de bord client.',
-    solution: 'Application web full-stack avec Laravel, API REST complète, intégration Stripe pour les paiements, architecture cloud scalable.',
-    result: 'Plateforme live avec 500+ utilisateurs actifs en 3 mois',
+  saas: {
     tags: ['Laravel', 'JavaScript', 'PostgreSQL', 'API REST', 'Stripe'],
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
-    category: 'Développement',
   },
-  {
-    id: 4,
-    title: 'Solution analytics pour le marketing digital',
-    client: 'Agence marketing',
-    shortDesc: 'Tracking et optimisation des campagnes',
-    fullDesc: 'Équipe marketing sans visibilité sur le ROI de ses campagnes. Nous avons mis en place un système complet de tracking et d\'optimisation.',
-    challenge: 'Aucune visibilité sur le ROI des campagnes, impossible d\'optimiser les budgets marketing efficacement.',
-    solution: 'Setup Google Analytics 4 avancé, dashboards de suivi personnalisés, tracking custom des conversions, reporting automatisé.',
-    result: '+35% de ROI sur les campagnes grâce aux insights data',
+  analytics_project: {
     tags: ['Google Analytics', 'Tag Manager', 'Data Studio', 'Google Ads'],
     image: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&q=80',
-    category: 'Analytics',
   },
-  {
-    id: 5,
-    title: 'Chatbot IA pour le support client',
-    client: 'SaaS B2B',
-    shortDesc: 'Automatisation du support de niveau 1',
-    fullDesc: 'Support client débordé par le volume de demandes récurrentes. Nous avons développé un chatbot IA intelligent.',
-    challenge: 'L\'équipe support passait 70% de son temps sur des questions récurrentes, retardant les demandes complexes.',
-    solution: 'Chatbot basé sur LLM, intégration avec la base de connaissances, escalation intelligente vers les humains.',
-    result: '70% des demandes support de niveau 1 gérées automatiquement',
+  chatbot: {
     tags: ['Python', 'LangChain', 'OpenAI', 'API REST'],
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
-    category: 'IA',
   },
-  {
-    id: 6,
-    title: 'Data warehouse moderne',
-    client: 'Retail chain',
-    shortDesc: 'Modernisation de l\'infrastructure data',
-    fullDesc: 'Infrastructure data obsolète ne supportant pas la croissance. Migration vers une architecture moderne cloud-native.',
-    challenge: 'Temps de requête de plusieurs minutes, données non fiables, impossible de scaler avec la croissance.',
-    solution: 'Architecture cloud-native avec BigQuery, dbt pour la transformation, monitoring complet, gouvernance des données.',
-    result: 'Temps de requête divisé par 10, 99.9% de disponibilité',
+  warehouse: {
     tags: ['BigQuery', 'dbt', 'SQL', 'Dataflow'],
     image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80',
-    category: 'Data & BI',
   },
-];
+};
 
-const categories = ['Tous', 'Data & BI', 'Développement', 'Analytics', 'Automatisation', 'IA'];
+const categoryKeys = ['data_bi', 'dev', 'analytics', 'automation', 'ai'] as const;
 
 export default function Realisations() {
-  const [selectedCategory, setSelectedCategory] = useState('Tous');
-  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  const { t } = useTranslation('realisations');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedProjectKey, setSelectedProjectKey] = useState<string | null>(null);
 
-  const filteredProjects = selectedCategory === 'Tous'
-    ? projects
-    : projects.filter((p) => p.category === selectedCategory);
+  const filteredProjects = selectedCategory === 'all'
+    ? projectKeys
+    : projectKeys.filter((key) => t(`items.${key}.category`) === t(`categories.${selectedCategory}`));
+
+  const selectedProject = selectedProjectKey ? {
+    key: selectedProjectKey,
+    ...projectAssets[selectedProjectKey],
+  } : null;
 
   return (
     <div className="relative pt-20">
@@ -107,12 +62,12 @@ export default function Realisations() {
             className="max-w-4xl"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
-              Ce qu'on a construit.
+              {t('hero.title_1')}
               <br />
-              <span className="text-neon">Ce qu'on a prouvé.</span>
+              <span className="text-neon">{t('hero.title_highlight')}</span>
             </h1>
             <p className="text-xl text-text-secondary max-w-2xl">
-              Chaque projet est une histoire de transformation. Voici les nôtres.
+              {t('hero.subtitle')}
             </p>
           </motion.div>
         </div>
@@ -128,66 +83,74 @@ export default function Realisations() {
             viewport={{ once: true }}
             className="flex flex-wrap gap-3 mb-12"
           >
-            {categories.map((category) => (
+            <button
+              onClick={() => setSelectedCategory('all')}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === 'all'
+                  ? 'bg-neon text-black'
+                  : 'bg-dark-elevated text-text-secondary border border-border hover:border-neon/50 hover:text-white'
+                }`}
+            >
+              {t('filter_all')}
+            </button>
+            {categoryKeys.map((catKey) => (
               <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === category
+                key={catKey}
+                onClick={() => setSelectedCategory(catKey)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === catKey
                     ? 'bg-neon text-black'
                     : 'bg-dark-elevated text-text-secondary border border-border hover:border-neon/50 hover:text-white'
-                }`}
+                  }`}
               >
-                {category}
+                {t(`categories.${catKey}`)}
               </button>
             ))}
           </motion.div>
 
           {/* Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project, index) => (
+            {filteredProjects.map((key, index) => (
               <motion.div
-                key={project.id}
+                key={key}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group cursor-pointer"
-                onClick={() => setSelectedProject(project)}
+                onClick={() => setSelectedProjectKey(key)}
               >
                 <div className="relative overflow-hidden rounded-2xl bg-dark border border-border card-hover">
                   {/* Image */}
                   <div className="relative h-56 overflow-hidden">
                     <div
                       className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                      style={{ backgroundImage: `url(${project.image})` }}
+                      style={{ backgroundImage: `url(${projectAssets[key].image})` }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent" />
-                    
+
                     {/* Result Badge */}
                     <div className="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-neon/20 border border-neon/30">
-                      <span className="text-neon text-xs font-mono font-medium">{project.result}</span>
+                      <span className="text-neon text-xs font-mono font-medium">{t(`items.${key}.result`)}</span>
                     </div>
 
                     {/* Category */}
                     <div className="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-dark/80 border border-border">
-                      <span className="text-white text-xs">{project.category}</span>
+                      <span className="text-white text-xs">{t(`items.${key}.category`)}</span>
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="p-6">
-                    <p className="text-text-secondary text-sm mb-2">{project.client}</p>
+                    <p className="text-text-secondary text-sm mb-2">{t(`items.${key}.client`)}</p>
                     <h3 className="text-xl font-heading font-bold text-white mb-3 group-hover:text-neon transition-colors">
-                      {project.title}
+                      {t(`items.${key}.title`)}
                     </h3>
                     <p className="text-text-secondary text-sm leading-relaxed mb-4">
-                      {project.shortDesc}
+                      {t(`items.${key}.shortDesc`)}
                     </p>
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2">
-                      {project.tags.slice(0, 3).map((tag) => (
+                      {projectAssets[key].tags.slice(0, 3).map((tag) => (
                         <span
                           key={tag}
                           className="px-2.5 py-0.5 rounded-full bg-dark-elevated text-text-secondary text-xs font-mono border border-border"
@@ -195,9 +158,9 @@ export default function Realisations() {
                           {tag}
                         </span>
                       ))}
-                      {project.tags.length > 3 && (
+                      {projectAssets[key].tags.length > 3 && (
                         <span className="px-2.5 py-0.5 rounded-full bg-dark-elevated text-text-secondary text-xs font-mono border border-border">
-                          +{project.tags.length - 3}
+                          +{projectAssets[key].tags.length - 3}
                         </span>
                       )}
                     </div>
@@ -213,7 +176,7 @@ export default function Realisations() {
       </section>
 
       {/* Project Detail Dialog */}
-      <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
+      <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProjectKey(null)}>
         <DialogContent className="max-w-4xl bg-dark-surface border-border text-white max-h-[90vh] overflow-y-auto">
           {selectedProject && (
             <div className="p-2">
@@ -225,7 +188,7 @@ export default function Realisations() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-surface via-dark-surface/50 to-transparent" />
                 <button
-                  onClick={() => setSelectedProject(null)}
+                  onClick={() => setSelectedProjectKey(null)}
                   className="absolute top-4 right-4 w-10 h-10 rounded-full bg-dark/80 flex items-center justify-center hover:bg-dark transition-colors"
                 >
                   <X size={20} />
@@ -237,43 +200,43 @@ export default function Realisations() {
                 <div>
                   <div className="flex items-center space-x-3 mb-3">
                     <span className="px-3 py-1 rounded-full bg-neon/10 text-neon text-xs font-mono border border-neon/20">
-                      {selectedProject.category}
+                      {t(`items.${selectedProject.key}.category`)}
                     </span>
-                    <span className="text-text-secondary text-sm">{selectedProject.client}</span>
+                    <span className="text-text-secondary text-sm">{t(`items.${selectedProject.key}.client`)}</span>
                   </div>
                   <h2 className="text-3xl font-heading font-bold text-white mb-4">
-                    {selectedProject.title}
+                    {t(`items.${selectedProject.key}.title`)}
                   </h2>
                 </div>
 
                 {/* Result Highlight */}
                 <div className="p-4 rounded-xl bg-neon/10 border border-neon/20">
                   <p className="text-neon font-medium">
-                    <span className="font-bold">Résultat clé :</span> {selectedProject.result}
+                    <span className="font-bold">{t('dialog.result_label')}</span> {t(`items.${selectedProject.key}.result`)}
                   </p>
                 </div>
 
                 {/* Sections */}
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-lg font-heading font-bold text-white mb-2">Le contexte</h3>
-                    <p className="text-text-secondary leading-relaxed">{selectedProject.fullDesc}</p>
+                    <h3 className="text-lg font-heading font-bold text-white mb-2">{t('dialog.context')}</h3>
+                    <p className="text-text-secondary leading-relaxed">{t(`items.${selectedProject.key}.fullDesc`)}</p>
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-heading font-bold text-white mb-2">Le défi</h3>
-                    <p className="text-text-secondary leading-relaxed">{selectedProject.challenge}</p>
+                    <h3 className="text-lg font-heading font-bold text-white mb-2">{t('dialog.challenge')}</h3>
+                    <p className="text-text-secondary leading-relaxed">{t(`items.${selectedProject.key}.challenge`)}</p>
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-heading font-bold text-white mb-2">Notre solution</h3>
-                    <p className="text-text-secondary leading-relaxed">{selectedProject.solution}</p>
+                    <h3 className="text-lg font-heading font-bold text-white mb-2">{t('dialog.solution')}</h3>
+                    <p className="text-text-secondary leading-relaxed">{t(`items.${selectedProject.key}.solution`)}</p>
                   </div>
                 </div>
 
                 {/* Technologies */}
                 <div>
-                  <h3 className="text-lg font-heading font-bold text-white mb-3">Technologies utilisées</h3>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{t('dialog.technologies')}</h3>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.tags.map((tag) => (
                       <span
@@ -292,7 +255,7 @@ export default function Realisations() {
                     href="/contact"
                     className="btn-primary inline-flex items-center"
                   >
-                    Discuter de mon projet
+                    {t('dialog.cta')}
                     <ArrowUpRight size={18} className="ml-2" />
                   </a>
                 </div>

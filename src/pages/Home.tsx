@@ -9,75 +9,42 @@ import {
   ArrowDown,
   ChevronRight
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import ServiceCard from '../components/molecules/ServiceCard/ServiceCard';
 import ProjectCard from '../components/molecules/ProjectCard/ProjectCard';
 import AnimatedCounter from '../components/atoms/AnimatedCounter/AnimatedCounter';
 
-const services = [
-  {
-    icon: Database,
-    title: 'Data & Business Intelligence',
-    description: 'Transformez vos données en décisions stratégiques avec des tableaux de bord interactifs et des analyses avancées.',
-    link: '/services#data-bi',
-  },
-  {
-    icon: Code2,
-    title: 'Développement Logiciel & Web',
-    description: 'Des applications sur mesure, robustes et scalables pour répondre à vos besoins spécifiques.',
-    link: '/services#developpement',
-  },
-  {
-    icon: TrendingUp,
-    title: 'Analytics & Marketing Digital',
-    description: 'Mesurez, optimisez et performez avec une approche data-driven de votre marketing.',
-    link: '/services#analytics',
-  },
-  {
-    icon: Settings2,
-    title: 'Automatisation de Processus',
-    description: 'Éliminez les tâches répétitives et gagnez en efficacité avec l\'automatisation intelligente.',
-    link: '/services#automatisation',
-  },
-  {
-    icon: Brain,
-    title: 'Intelligence Artificielle',
-    description: 'L\'IA au service de votre business : modèles prédictifs, chatbots et solutions ML.',
-    link: '/services#ia',
-  },
+const serviceKeys = [
+  { icon: Database, key: 'data_bi', link: '/services#data-bi' },
+  { icon: Code2, key: 'dev', link: '/services#developpement' },
+  { icon: TrendingUp, key: 'analytics', link: '/services#analytics' },
+  { icon: Settings2, key: 'automation', link: '/services#automatisation' },
+  { icon: Brain, key: 'ai', link: '/services#ia' },
 ];
 
-const projects = [
+const projectKeys = [
   {
-    title: 'Migration Data vers GCP + Dashboards Power BI',
-    client: 'PME secteur logistique',
-    description: 'Centralisation des données dispersées et création de dashboards connectés pour une vision unifiée.',
-    result: '-60% temps reporting',
+    key: 'gcp',
     tags: ['BigQuery', 'Dataflow', 'Power BI', 'Python'],
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
   },
   {
-    title: 'Automatisation pipelines data avec Airflow',
-    client: 'Entreprise e-commerce',
-    description: 'Orchestration complète des traitements de données avec monitoring et alerting.',
-    result: '20h/semaine économisées',
+    key: 'airflow',
     tags: ['Airflow', 'Python', 'SQL', 'Cloud Scheduler'],
     image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80',
   },
   {
-    title: 'Développement plateforme SaaS',
-    client: 'Startup fintech',
-    description: 'Application web complète avec modèle de leasing intégré et système d\'abonnement.',
-    result: 'Live en 3 mois',
+    key: 'saas',
     tags: ['Laravel', 'React', 'PostgreSQL', 'API REST'],
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
   },
 ];
 
-const stats = [
-  { value: 50, suffix: '+', label: 'Projets livrés' },
-  { value: 15, suffix: '+', label: 'Clients accompagnés' },
-  { value: 99, suffix: '%', label: 'Taux de satisfaction' },
-  { value: 5, suffix: '', label: 'Domaines d\'expertise' },
+const statKeys = [
+  { value: 50, suffix: '+', labelKey: 'projects' },
+  { value: 15, suffix: '+', labelKey: 'clients' },
+  { value: 99, suffix: '%', labelKey: 'satisfaction' },
+  { value: 5, suffix: '', labelKey: 'expertise' },
 ];
 
 const techStack = [
@@ -85,6 +52,8 @@ const techStack = [
 ];
 
 export default function Home() {
+  const { t } = useTranslation('home');
+
   return (
     <div className="relative">
       {/* Hero Section */}
@@ -99,7 +68,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <span className="inline-block px-4 py-2 rounded-full bg-neon/10 text-neon text-sm font-mono border border-neon/20 mb-8">
-                Expertise Digitale & Data
+                {t('hero.badge')}
               </span>
             </motion.div>
 
@@ -109,16 +78,16 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold leading-tight mb-6"
             >
-              <span className="text-white">Vos </span>
-              <span className="text-neon glow-text">données</span>
+              <span className="text-white">{t('hero.title_1')}</span>
+              <span className="text-neon glow-text">{t('hero.title_highlight_1')}</span>
               <span className="text-white">.</span>
               <br />
-              <span className="text-white">Notre </span>
-              <span className="text-neon glow-text">expertise</span>
+              <span className="text-white">{t('hero.title_2')}</span>
+              <span className="text-neon glow-text">{t('hero.title_highlight_2')}</span>
               <span className="text-white">.</span>
               <br />
-              <span className="text-white">Votre </span>
-              <span className="text-neon glow-text">avantage</span>
+              <span className="text-white">{t('hero.title_3')}</span>
+              <span className="text-neon glow-text">{t('hero.title_highlight_3')}</span>
               <span className="text-white">.</span>
             </motion.h1>
 
@@ -128,9 +97,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-lg lg:text-xl text-text-secondary max-w-2xl mx-auto mb-10"
             >
-              WareBi accompagne les entreprises dans leur transformation digitale —
-              de la data à l'intelligence artificielle, nous construisons les solutions
-              qui font la différence.
+              {t('hero.subtitle')}
             </motion.p>
 
             <motion.div
@@ -140,10 +107,10 @@ export default function Home() {
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <Link to="/services" className="btn-primary w-full sm:w-auto">
-                Découvrir nos services
+                {t('hero.cta_primary')}
               </Link>
               <Link to="/contact" className="btn-secondary w-full sm:w-auto">
-                Nous contacter
+                {t('hero.cta_secondary')}
               </Link>
             </motion.div>
 
@@ -154,7 +121,7 @@ export default function Home() {
               transition={{ duration: 1, delay: 1.2 }}
               className="mt-20"
             >
-              <p className="text-text-secondary text-sm mb-6">Technologies maîtrisées</p>
+              <p className="text-text-secondary text-sm mb-6">{t('hero.tech_label')}</p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 {techStack.map((tech) => (
                   <span
@@ -181,7 +148,7 @@ export default function Home() {
             transition={{ duration: 2, repeat: Infinity }}
             className="flex flex-col items-center text-text-secondary"
           >
-            <span className="text-sm mb-2">En savoir plus</span>
+            <span className="text-sm mb-2">{t('hero.scroll')}</span>
             <ArrowDown size={20} />
           </motion.div>
         </motion.div>
@@ -198,14 +165,22 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-4">
-              5 expertises, une seule mission :
-              <span className="text-neon"> votre succès digital</span>
+              {t('services.title')}
+              <span className="text-neon">{t('services.title_highlight')}</span>
             </h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <ServiceCard key={service.title} {...service} index={index} />
+            {serviceKeys.map((service, index) => (
+              <ServiceCard
+                key={service.key}
+                icon={service.icon}
+                title={t(`services.items.${service.key}.title`)}
+                description={t(`services.items.${service.key}.description`)}
+                link={service.link}
+                index={index}
+                learnMore={t('services.learn_more')}
+              />
             ))}
           </div>
         </div>
@@ -216,9 +191,9 @@ export default function Home() {
         <div className="absolute inset-0 grid-overlay opacity-20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-            {stats.map((stat, index) => (
+            {statKeys.map((stat, index) => (
               <motion.div
-                key={stat.label}
+                key={stat.labelKey}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -228,7 +203,7 @@ export default function Home() {
                 <div className="text-4xl lg:text-6xl font-heading font-bold text-neon mb-2">
                   <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                 </div>
-                <p className="text-text-secondary text-sm lg:text-base">{stat.label}</p>
+                <p className="text-text-secondary text-sm lg:text-base">{t(`stats.${stat.labelKey}`)}</p>
               </motion.div>
             ))}
           </div>
@@ -247,25 +222,34 @@ export default function Home() {
           >
             <div>
               <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-4">
-                Ce qu'on a construit
-                <span className="text-neon"> récemment</span>
+                {t('projects.title')}
+                <span className="text-neon">{t('projects.title_highlight')}</span>
               </h2>
               <p className="text-text-secondary text-lg max-w-xl">
-                Découvrez nos projets récents et l'impact qu'ils ont eu sur nos clients.
+                {t('projects.subtitle')}
               </p>
             </div>
             <Link
               to="/realisations"
               className="mt-6 lg:mt-0 inline-flex items-center text-neon font-medium hover:underline"
             >
-              Voir toutes nos réalisations
+              {t('projects.see_all')}
               <ChevronRight size={20} className="ml-1" />
             </Link>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <ProjectCard key={project.title} {...project} index={index} />
+            {projectKeys.map((project, index) => (
+              <ProjectCard
+                key={project.key}
+                title={t(`projects.items.${project.key}.title`)}
+                client={t(`projects.items.${project.key}.client`)}
+                description={t(`projects.items.${project.key}.description`)}
+                result={t(`projects.items.${project.key}.result`)}
+                tags={project.tags}
+                image={project.image}
+                index={index}
+              />
             ))}
           </div>
         </div>
@@ -284,14 +268,14 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6">
-              Prêt à transformer votre business
-              <span className="text-neon"> avec la data ?</span>
+              {t('cta.title')}
+              <span className="text-neon">{t('cta.title_highlight')}</span>
             </h2>
             <p className="text-text-secondary text-lg mb-10 max-w-2xl mx-auto">
-              Discutons de votre projet. Premier échange gratuit et sans engagement.
+              {t('cta.subtitle')}
             </p>
             <Link to="/contact" className="btn-primary text-lg px-8 py-4">
-              Prendre rendez-vous
+              {t('cta.button')}
             </Link>
           </motion.div>
         </div>

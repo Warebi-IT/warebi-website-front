@@ -1,91 +1,30 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import BlogCard from '../components/molecules/BlogCard/BlogCard';
 
-const categories = ['Tous', 'Data', 'Dev', 'Analytics', 'IA', 'Automatisation'];
+const categoryKeys = ['data', 'dev', 'analytics', 'ai', 'automation'] as const;
 
-const articles = [
-  {
-    title: 'Comment automatiser vos processus data avec Apache Airflow',
-    excerpt: 'Découvrez comment orchestrer vos pipelines de données de manière fiable et scalable avec Airflow. Guide complet avec exemples concrets.',
-    category: 'Automatisation',
-    date: '15 Jan 2025',
-    readTime: '8 min',
-    image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80',
-    slug: 'automatiser-processus-data-airflow',
-    featured: true,
-  },
-  {
-    title: '5 bonnes pratiques pour des tableaux de bord Power BI performants',
-    excerpt: 'Optimisez vos dashboards Power BI pour des temps de chargement rapides et une meilleure expérience utilisateur.',
-    category: 'Data',
-    date: '10 Jan 2025',
-    readTime: '6 min',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-    slug: 'bonnes-pratiques-power-bi',
-    featured: false,
-  },
-  {
-    title: "L'IA au service des PME : 3 cas d'usage concrets",
-    excerpt: 'Comment les petites et moyennes entreprises peuvent tirer parti de l\'intelligence artificielle sans budget illimité.',
-    category: 'IA',
-    date: '5 Jan 2025',
-    readTime: '10 min',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
-    slug: 'ia-pme-cas-usage',
-    featured: false,
-  },
-  {
-    title: 'Migration vers BigQuery : guide complet étape par étape',
-    excerpt: 'Tout ce que vous devez savoir pour migrer votre data warehouse vers Google BigQuery sans douleur.',
-    category: 'Data',
-    date: '28 Déc 2024',
-    readTime: '12 min',
-    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80',
-    slug: 'migration-bigquery-guide',
-    featured: false,
-  },
-  {
-    title: 'SEO data-driven : comment la data améliore votre référencement',
-    excerpt: 'Utilisez les données pour prendre des décisions SEO éclairées et améliorer votre visibilité organique.',
-    category: 'Analytics',
-    date: '20 Déc 2024',
-    readTime: '7 min',
-    image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80',
-    slug: 'seo-data-driven',
-    featured: false,
-  },
-  {
-    title: 'Construire une API REST scalable avec Laravel',
-    excerpt: 'Les meilleures pratiques pour développer des APIs robustes et maintenables avec le framework PHP Laravel.',
-    category: 'Dev',
-    date: '15 Déc 2024',
-    readTime: '9 min',
-    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80',
-    slug: 'api-rest-scalable-laravel',
-    featured: false,
-  },
-  {
-    title: 'Chatbots intelligents : au-delà des FAQ basiques',
-    excerpt: 'Comment créer des chatbots qui comprennent réellement le contexte et apportent de la valeur à vos utilisateurs.',
-    category: 'IA',
-    date: '8 Déc 2024',
-    readTime: '8 min',
-    image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&q=80',
-    slug: 'chatbots-intelligents',
-    featured: false,
-  },
+const articleKeys = [
+  { key: 'airflow', categoryKey: 'automation', image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80', slug: 'automatiser-processus-data-airflow', featured: true },
+  { key: 'powerbi', categoryKey: 'data', image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', slug: 'bonnes-pratiques-power-bi', featured: false },
+  { key: 'ia_pme', categoryKey: 'ai', image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80', slug: 'ia-pme-cas-usage', featured: false },
+  { key: 'bigquery', categoryKey: 'data', image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80', slug: 'migration-bigquery-guide', featured: false },
+  { key: 'seo', categoryKey: 'analytics', image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80', slug: 'seo-data-driven', featured: false },
+  { key: 'laravel', categoryKey: 'dev', image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80', slug: 'api-rest-scalable-laravel', featured: false },
+  { key: 'chatbots', categoryKey: 'ai', image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&q=80', slug: 'chatbots-intelligents', featured: false },
 ];
 
 export default function Blog() {
-  const [selectedCategory, setSelectedCategory] = useState('Tous');
+  const { t } = useTranslation('blog');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  const filteredArticles = selectedCategory === 'Tous'
-    ? articles
-    : articles.filter((a) => a.category === selectedCategory);
+  const filteredArticles = selectedCategory === 'all'
+    ? articleKeys
+    : articleKeys.filter((a) => a.categoryKey === selectedCategory);
 
-  const featuredArticle = articles.find((a) => a.featured);
-  const regularArticles = filteredArticles.filter((a) => !a.featured || selectedCategory !== 'Tous');
+  const featuredArticle = articleKeys.find((a) => a.featured);
+  const regularArticles = filteredArticles.filter((a) => !a.featured || selectedCategory !== 'all');
 
   return (
     <div className="relative pt-20">
@@ -100,10 +39,10 @@ export default function Blog() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
-              Insights & <span className="text-neon">Expertise</span>
+              {t('hero.title')}<span className="text-neon">{t('hero.title_highlight')}</span>
             </h1>
             <p className="text-xl text-text-secondary">
-              Nos analyses, guides et retours d'expérience sur la data, le dev et l'IA.
+              {t('hero.subtitle')}
             </p>
           </motion.div>
         </div>
@@ -119,24 +58,44 @@ export default function Blog() {
             viewport={{ once: true }}
             className="flex flex-wrap gap-3 mb-12"
           >
-            {categories.map((category) => (
+            <button
+              onClick={() => setSelectedCategory('all')}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === 'all'
+                ? 'bg-neon text-black'
+                : 'bg-dark-elevated text-text-secondary border border-border hover:border-neon/50 hover:text-white'
+                }`}
+            >
+              {t('filter_all')}
+            </button>
+            {categoryKeys.map((catKey) => (
               <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category
-                    ? 'bg-neon text-black'
-                    : 'bg-dark-elevated text-text-secondary border border-border hover:border-neon/50 hover:text-white'
+                key={catKey}
+                onClick={() => setSelectedCategory(catKey)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === catKey
+                  ? 'bg-neon text-black'
+                  : 'bg-dark-elevated text-text-secondary border border-border hover:border-neon/50 hover:text-white'
                   }`}
               >
-                {category}
+                {t(`categories.${catKey}`)}
               </button>
             ))}
           </motion.div>
 
           {/* Featured Article */}
-          {selectedCategory === 'Tous' && featuredArticle && (
+          {selectedCategory === 'all' && featuredArticle && (
             <div className="mb-12">
-              <BlogCard {...featuredArticle} index={0} />
+              <BlogCard
+                title={t(`articles.${featuredArticle.key}.title`)}
+                excerpt={t(`articles.${featuredArticle.key}.excerpt`)}
+                category={t(`categories.${featuredArticle.categoryKey}`)}
+                date={t(`articles.${featuredArticle.key}.date`)}
+                readTime={t(`articles.${featuredArticle.key}.readTime`)}
+                image={featuredArticle.image}
+                slug={featuredArticle.slug}
+                index={0}
+                featured={true}
+                readArticleLabel={t('read_article')}
+              />
             </div>
           )}
 
@@ -145,8 +104,15 @@ export default function Blog() {
             {regularArticles.map((article, index) => (
               <BlogCard
                 key={article.slug}
-                {...article}
-                index={selectedCategory === 'Tous' ? index + 1 : index}
+                title={t(`articles.${article.key}.title`)}
+                excerpt={t(`articles.${article.key}.excerpt`)}
+                category={t(`categories.${article.categoryKey}`)}
+                date={t(`articles.${article.key}.date`)}
+                readTime={t(`articles.${article.key}.readTime`)}
+                image={article.image}
+                slug={article.slug}
+                index={selectedCategory === 'all' ? index + 1 : index}
+                readArticleLabel={t('read_article')}
               />
             ))}
           </div>
@@ -154,7 +120,7 @@ export default function Blog() {
           {/* Empty State */}
           {regularArticles.length === 0 && (
             <div className="text-center py-16">
-              <p className="text-text-secondary">Aucun article dans cette catégorie pour le moment.</p>
+              <p className="text-text-secondary">{t('empty')}</p>
             </div>
           )}
 
@@ -167,7 +133,7 @@ export default function Blog() {
               className="text-center mt-16"
             >
               <button className="btn-secondary">
-                Charger plus d'articles
+                {t('load_more')}
               </button>
             </motion.div>
           )}
@@ -185,19 +151,19 @@ export default function Blog() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-4">
-              Restez informé des <span className="text-neon">dernières tendances</span>
+              {t('newsletter.title')}<span className="text-neon">{t('newsletter.title_highlight')}</span>
             </h2>
             <p className="text-text-secondary mb-8 max-w-xl mx-auto">
-              Inscrivez-vous à notre newsletter pour recevoir nos meilleurs articles directement dans votre boîte mail.
+              {t('newsletter.subtitle')}
             </p>
             <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Votre email professionnel"
+                placeholder={t('newsletter.placeholder')}
                 className="flex-1 px-4 py-3 rounded-lg bg-dark-elevated border border-border text-white placeholder:text-text-secondary focus:outline-none focus:border-neon transition-colors"
               />
               <button type="submit" className="btn-primary whitespace-nowrap">
-                S'inscrire
+                {t('newsletter.button')}
               </button>
             </form>
           </motion.div>

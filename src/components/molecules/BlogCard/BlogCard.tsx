@@ -12,6 +12,7 @@ interface BlogCardProps {
   slug: string;
   index: number;
   featured?: boolean;
+  readArticleLabel?: string;
 }
 
 export default function BlogCard({
@@ -24,6 +25,7 @@ export default function BlogCard({
   slug,
   index,
   featured = false,
+  readArticleLabel = 'Lire l\'article',
 }: BlogCardProps) {
   if (featured) {
     return (
@@ -62,7 +64,7 @@ export default function BlogCard({
                   {readTime}
                 </div>
                 <span className="flex items-center text-neon font-medium">
-                  Lire l'article
+                  {readArticleLabel}
                   <ArrowRight size={18} className="ml-2 transform group-hover:translate-x-1 transition-transform" />
                 </span>
               </div>

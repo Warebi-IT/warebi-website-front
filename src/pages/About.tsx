@@ -1,80 +1,28 @@
 import { motion } from 'framer-motion';
 import { Target, Users, Lightbulb, Shield, CheckCircle2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-const values = [
-  {
-    icon: Lightbulb,
-    title: 'Innovation',
-    description: 'Toujours à la recherche des meilleures technologies pour vous offrir des solutions d\'avant-garde.',
-  },
-  {
-    icon: Target,
-    title: 'Expertise',
-    description: 'Chaque projet est piloté par des spécialistes confirmés avec des années d\'expérience.',
-  },
-  {
-    icon: Users,
-    title: 'Partenariat',
-    description: 'On ne livre pas un produit, on construit une relation durable basée sur la confiance.',
-  },
-  {
-    icon: Shield,
-    title: 'Rigueur',
-    description: 'Approche data-driven, code propre, livrables documentés et processus éprouvés.',
-  },
+const valueKeys = [
+  { icon: Lightbulb, key: 'innovation' },
+  { icon: Target, key: 'expertise' },
+  { icon: Users, key: 'partnership' },
+  { icon: Shield, key: 'rigor' },
 ];
 
-const process = [
-  {
-    number: '01',
-    title: 'Comprendre',
-    description: 'On analyse votre contexte, vos données et vos objectifs pour bien cerner vos besoins.',
-  },
-  {
-    number: '02',
-    title: 'Construire',
-    description: 'On développe la solution technique adaptée, en mode agile avec des itérations régulières.',
-  },
-  {
-    number: '03',
-    title: 'Mesurer',
-    description: 'On suit les KPIs et on optimise en continu pour maximiser l\'impact de nos solutions.',
-  },
-  {
-    number: '04',
-    title: 'Accompagner',
-    description: 'On reste à vos côtés pour faire évoluer la solution et répondre à vos nouveaux défis.',
-  },
-];
+const processKeys = ['understand', 'build', 'measure', 'support'] as const;
 
 const team = [
-  {
-    name: 'Alexandre Martin',
-    role: 'CEO & Fondateur',
-    expertise: 'Data & Stratégie',
-    initials: 'AM',
-  },
-  {
-    name: 'Sarah Chen',
-    role: 'CTO',
-    expertise: 'Architecture & Dev',
-    initials: 'SC',
-  },
-  {
-    name: 'Thomas Dubois',
-    role: 'Lead Data Engineer',
-    expertise: 'Data & Analytics',
-    initials: 'TD',
-  },
-  {
-    name: 'Marie Lefebvre',
-    role: 'Head of AI',
-    expertise: 'Machine Learning',
-    initials: 'ML',
-  },
+  { name: 'Alexandre Martin', role: 'CEO & Fondateur', expertise: 'Data & Stratégie', initials: 'AM' },
+  { name: 'Sarah Chen', role: 'CTO', expertise: 'Architecture & Dev', initials: 'SC' },
+  { name: 'Thomas Dubois', role: 'Lead Data Engineer', expertise: 'Data & Analytics', initials: 'TD' },
+  { name: 'Marie Lefebvre', role: 'Head of AI', expertise: 'Machine Learning', initials: 'ML' },
 ];
 
+const badgeKeys = ['gcp', 'microsoft', 'powerbi', 'iso'] as const;
+
 export default function About() {
+  const { t } = useTranslation('about');
+
   return (
     <div className="relative pt-20">
       {/* Hero Section */}
@@ -88,17 +36,14 @@ export default function About() {
             className="max-w-4xl"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold text-white mb-8 leading-tight">
-              On est <span className="text-neon">WareBi.</span>
+              {t('hero.title_1')}<span className="text-neon">{t('hero.title_highlight_1')}</span>
               <br />
-              On transforme les données
+              {t('hero.title_2')}
               <br />
-              en <span className="text-neon">avantage concurrentiel.</span>
+              {t('hero.title_3')}<span className="text-neon">{t('hero.title_highlight_2')}</span>
             </h1>
             <p className="text-xl text-text-secondary leading-relaxed max-w-2xl">
-              WareBi est né d'une conviction : les données sont le nouveau pétrole, 
-              mais seulement si vous savez comment les exploiter. Notre mission est 
-              d'aider les entreprises à tirer le meilleur parti de leurs actifs digitaux 
-              grâce à l'expertise data, le développement sur mesure et l'intelligence artificielle.
+              {t('hero.subtitle')}
             </p>
           </motion.div>
         </div>
@@ -115,26 +60,12 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
-                Notre histoire & <span className="text-neon">vision</span>
+                {t('story.title')}<span className="text-neon">{t('story.title_highlight')}</span>
               </h2>
               <div className="space-y-4 text-text-secondary leading-relaxed">
-                <p>
-                  Fondée en 2020, WareBi est le fruit de plusieurs années d'expérience 
-                  dans le conseil en data et le développement logiciel. Nous avons constaté 
-                  que de nombreuses entreprises accumulaient des données sans savoir 
-                  comment les valoriser.
-                </p>
-                <p>
-                  Notre vision est simple : rendre la data accessible et actionnable 
-                  pour toutes les entreprises, des PME aux grands groupes. Nous croyons 
-                  fermement que l'expertise technique doit être au service de la compréhension 
-                  métier.
-                </p>
-                <p>
-                  Aujourd'hui, WareBi accompagne plus de 15 clients sur des projets 
-                  variés : migration de données, développement d'applications, 
-                  automatisation de processus et intégration de l'IA.
-                </p>
+                <p>{t('story.p1')}</p>
+                <p>{t('story.p2')}</p>
+                <p>{t('story.p3')}</p>
               </div>
             </motion.div>
             <motion.div
@@ -146,9 +77,9 @@ export default function About() {
             >
               <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-neon/20 to-dark-surface border border-neon/20 p-8 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-8xl font-heading font-bold text-neon mb-4">5</div>
-                  <p className="text-white text-xl">années d'expertise</p>
-                  <p className="text-text-secondary mt-2">à votre service</p>
+                  <div className="text-8xl font-heading font-bold text-neon mb-4">{t('story.years_number')}</div>
+                  <p className="text-white text-xl">{t('story.years_label')}</p>
+                  <p className="text-text-secondary mt-2">{t('story.years_sub')}</p>
                 </div>
               </div>
             </motion.div>
@@ -168,17 +99,17 @@ export default function About() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-4">
-              Comment on <span className="text-neon">travaille</span>
+              {t('process.title')}<span className="text-neon">{t('process.title_highlight')}</span>
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-              Une méthodologie éprouvée pour des résultats mesurables à chaque étape.
+              {t('process.subtitle')}
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((step, index) => (
+            {processKeys.map((key, index) => (
               <motion.div
-                key={step.number}
+                key={key}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -186,15 +117,15 @@ export default function About() {
                 className="relative"
               >
                 <div className="text-6xl font-heading font-bold text-neon/20 mb-4">
-                  {step.number}
+                  {t(`process.steps.${key}.number`)}
                 </div>
                 <h3 className="text-xl font-heading font-bold text-white mb-3">
-                  {step.title}
+                  {t(`process.steps.${key}.title`)}
                 </h3>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  {step.description}
+                  {t(`process.steps.${key}.description`)}
                 </p>
-                {index < process.length - 1 && (
+                {index < processKeys.length - 1 && (
                   <div className="hidden lg:block absolute top-8 right-0 w-full h-px bg-gradient-to-r from-neon/30 to-transparent" />
                 )}
               </motion.div>
@@ -214,10 +145,10 @@ export default function About() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-4">
-              Les experts derrière <span className="text-neon">WareBi</span>
+              {t('team.title')}<span className="text-neon">{t('team.title_highlight')}</span>
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-              Une équipe passionnée par la tech et dédiée à votre réussite.
+              {t('team.subtitle')}
             </p>
           </motion.div>
 
@@ -263,14 +194,14 @@ export default function About() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-4">
-              Nos <span className="text-neon">valeurs</span>
+              {t('values.title')}<span className="text-neon">{t('values.title_highlight')}</span>
             </h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {values.map((value, index) => (
+            {valueKeys.map((value, index) => (
               <motion.div
-                key={value.title}
+                key={value.key}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -282,10 +213,10 @@ export default function About() {
                 </div>
                 <div>
                   <h3 className="text-xl font-heading font-bold text-white mb-2">
-                    {value.title}
+                    {t(`values.${value.key}.title`)}
                   </h3>
                   <p className="text-text-secondary text-sm leading-relaxed">
-                    {value.description}
+                    {t(`values.${value.key}.description`)}
                   </p>
                 </div>
               </motion.div>
@@ -298,15 +229,10 @@ export default function About() {
       <section className="relative py-16 bg-dark-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-center gap-8">
-            {[
-              'Expertise certifiée GCP',
-              'Partenaire Microsoft',
-              'Certifié Power BI',
-              'ISO 27001',
-            ].map((badge) => (
-              <div key={badge} className="flex items-center space-x-2 text-text-secondary">
+            {badgeKeys.map((key) => (
+              <div key={key} className="flex items-center space-x-2 text-text-secondary">
                 <CheckCircle2 size={18} className="text-neon" />
-                <span className="text-sm">{badge}</span>
+                <span className="text-sm">{t(`badges.${key}`)}</span>
               </div>
             ))}
           </div>

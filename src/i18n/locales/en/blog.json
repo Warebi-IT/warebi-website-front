@@ -21,5 +21,49 @@
         "subtitle": "Subscribe to our newsletter to receive our best articles directly in your inbox.",
         "placeholder": "Your professional email",
         "button": "Subscribe"
+    },
+    "articles": {
+        "airflow": {
+            "title": "How to automate your data processes with Apache Airflow",
+            "excerpt": "Discover how to orchestrate your data pipelines reliably and at scale with Airflow. Complete guide with concrete examples.",
+            "date": "Jan 15, 2025",
+            "readTime": "8 min"
+        },
+        "powerbi": {
+            "title": "5 best practices for efficient Power BI dashboards",
+            "excerpt": "Optimize your Power BI dashboards for fast load times and a better user experience.",
+            "date": "Jan 10, 2025",
+            "readTime": "6 min"
+        },
+        "ia_pme": {
+            "title": "AI for SMEs: 3 concrete use cases",
+            "excerpt": "How small and medium businesses can leverage artificial intelligence without an unlimited budget.",
+            "date": "Jan 5, 2025",
+            "readTime": "10 min"
+        },
+        "bigquery": {
+            "title": "Migrating to BigQuery: complete step-by-step guide",
+            "excerpt": "Everything you need to know to migrate your data warehouse to Google BigQuery painlessly.",
+            "date": "Dec 28, 2024",
+            "readTime": "12 min"
+        },
+        "seo": {
+            "title": "Data-driven SEO: how data improves your search ranking",
+            "excerpt": "Use data to make informed SEO decisions and improve your organic visibility.",
+            "date": "Dec 20, 2024",
+            "readTime": "7 min"
+        },
+        "laravel": {
+            "title": "Building a scalable REST API with Laravel",
+            "excerpt": "Best practices for developing robust and maintainable APIs with the PHP Laravel framework.",
+            "date": "Dec 15, 2024",
+            "readTime": "9 min"
+        },
+        "chatbots": {
+            "title": "Intelligent chatbots: beyond basic FAQs",
+            "excerpt": "How to create chatbots that truly understand context and bring value to your users.",
+            "date": "Dec 8, 2024",
+            "readTime": "8 min"
+        }
     }
 }

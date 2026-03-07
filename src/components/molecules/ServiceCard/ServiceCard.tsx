@@ -8,9 +8,10 @@ interface ServiceCardProps {
   description: string;
   link: string;
   index: number;
+  learnMore?: string;
 }
 
-export default function ServiceCard({ icon: Icon, title, description, link, index }: ServiceCardProps) {
+export default function ServiceCard({ icon: Icon, title, description, link, index, learnMore = 'En savoir plus' }: ServiceCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -26,17 +27,17 @@ export default function ServiceCard({ icon: Icon, title, description, link, inde
           <div className="w-14 h-14 rounded-xl bg-neon/10 flex items-center justify-center mb-6 group-hover:bg-neon/20 transition-colors">
             <Icon size={28} className="text-neon" />
           </div>
-          
+
           <h3 className="text-xl font-heading font-bold text-white mb-3 group-hover:text-neon transition-colors">
             {title}
           </h3>
-          
+
           <p className="text-text-secondary text-sm leading-relaxed flex-grow">
             {description}
           </p>
-          
+
           <div className="mt-6 flex items-center text-neon text-sm font-medium">
-            <span>En savoir plus</span>
+            <span>{learnMore}</span>
             <svg
               className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform"
               fill="none"
