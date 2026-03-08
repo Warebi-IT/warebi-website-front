@@ -41,15 +41,12 @@ const projectKeys = [
 ];
 
 const statKeys = [
-  { value: 50, suffix: '+', labelKey: 'projects' },
-  { value: 15, suffix: '+', labelKey: 'clients' },
+  { value: 10, suffix: '+', labelKey: 'projects' },
+  { value: 5, suffix: '+', labelKey: 'clients' },
   { value: 99, suffix: '%', labelKey: 'satisfaction' },
   { value: 5, suffix: '', labelKey: 'expertise' },
 ];
 
-const techStack = [
-  'Power BI', 'GCP', 'Python', 'Airflow', 'Laravel', 'React', 'BigQuery', 'TensorFlow'
-];
 
 export default function Home() {
   const { t } = useTranslation('home');
@@ -123,12 +120,12 @@ export default function Home() {
             >
               <p className="text-text-secondary text-sm mb-6">{t('hero.tech_label')}</p>
               <div className="flex flex-wrap items-center justify-center gap-4">
-                {techStack.map((tech) => (
+                {serviceKeys.map((service) => (
                   <span
-                    key={tech}
+                    key={service.key}
                     className="px-4 py-2 rounded-lg bg-dark-surface border border-border text-text-secondary text-sm font-mono hover:border-neon/50 hover:text-neon transition-colors"
                   >
-                    {tech}
+                    {t(`services.items.${service.key}.title`)}
                   </span>
                 ))}
               </div>
