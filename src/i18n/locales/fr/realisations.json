@@ -21,6 +21,26 @@
         "cta": "Discuter de mon projet"
     },
     "items": {
+        "synapse": {
+            "title": "Synapse 42 - ERP Modulaire",
+            "client": "Société de consulting (Luxembourg)",
+            "shortDesc": "Application web et ERP modulaire spécialisé pour les consultants.",
+            "fullDesc": "Plateforme centralisant les outils de gestion d'activité de consulting au sein d'un seul environnement digital. L'application propose un modèle inédit de transparence, d'autonomie et de rémunération équitable pour les consultants.",
+            "challenge": "Créer un environnement digital unifié pour les consultants et les administrateurs, garantissant transparence financière, suivi d'activité complet et une gestion administrative drastiquement simplifiée.",
+            "solution": "Développement d'un front-office consultant (suivi du temps, CA personnel, compétences, génération de CV) et d'un back-office administrateur (profils, factures, cooptations) avec une forte exigence sur la fiabilité et l'ergonomie.",
+            "result": "Transparence totale, outil adopté dès son lancement",
+            "category": "Développement"
+        },
+        "syntetica": {
+            "title": "Syntetica - Plateforme SaaS Data Engineering",
+            "client": "Cible: Fintech, Healthtech, SaaS",
+            "shortDesc": "Génération de jeux de données synthétiques pilotée par la logique métier.",
+            "fullDesc": "Syntetica est une plateforme SaaS de génération de données synthétiques. L'utilisateur décrit la structure de ses données (types, contraintes, relations) par un schéma YAML et obtient en quelques secondes un dataset exportable, cohérent et réaliste, sans aucune ligne de code personnalisée.",
+            "challenge": "Les équipes data, QA et développement perdent un temps considérable à produire des jeux de données de test réalistes. Les données réelles sont inutilisables (RGPD, sensibilité) et les solutions existantes sont soit trop rigides, soit trop techniques.",
+            "solution": "Création d'une plateforme SaaS API-first avec modélisation déclarative, moteur Faker 2.0 performant basé sur un KD-Tree en Rust, simulation de jointures réalistes, et génération asynchrone sécurisée sur AWS.",
+            "result": "Génération instantanée de datasets complexes sans code",
+            "category": "Data & BI"
+        },
         "gcp": {
             "title": "Migration Data vers GCP + Dashboards Power BI",
             "client": "PME secteur logistique",

@@ -12,7 +12,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import ServiceCard from '../components/molecules/ServiceCard/ServiceCard';
 import ProjectCard from '../components/molecules/ProjectCard/ProjectCard';
-import AnimatedCounter from '../components/atoms/AnimatedCounter/AnimatedCounter';
+// import AnimatedCounter from '../components/atoms/AnimatedCounter/AnimatedCounter';
 
 const serviceKeys = [
   { icon: Database, key: 'data_bi', link: '/services#data-bi' },
@@ -23,6 +23,16 @@ const serviceKeys = [
 ];
 
 const projectKeys = [
+  {
+    key: 'synapse',
+    tags: ['Front-office', 'Back-office', 'ERP', 'Dashboard'],
+    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80',
+  },
+  {
+    key: 'syntetica',
+    tags: ['Python', 'FastAPI', 'Next.js', 'AWS', 'Rust'],
+    image: 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?w=800&q=80',
+  },
   {
     key: 'gcp',
     tags: ['BigQuery', 'Dataflow', 'Power BI', 'Python'],
@@ -40,12 +50,12 @@ const projectKeys = [
   },
 ];
 
-const statKeys = [
+/* const statKeys = [
   { value: 10, suffix: '+', labelKey: 'projects' },
   { value: 5, suffix: '+', labelKey: 'clients' },
   { value: 99, suffix: '%', labelKey: 'satisfaction' },
   { value: 5, suffix: '', labelKey: 'expertise' },
-];
+]; */
 
 
 export default function Home() {
@@ -183,7 +193,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Stats Section 
       <section className="relative py-24 lg:py-32 bg-dark-surface">
         <div className="absolute inset-0 grid-overlay opacity-20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -205,7 +215,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* Projects Section */}
       <section className="relative py-24 lg:py-32">

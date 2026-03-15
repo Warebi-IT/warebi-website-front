@@ -52,6 +52,18 @@
         "subtitle": "Discover our recent projects and the impact they had on our clients.",
         "see_all": "See all our work",
         "items": {
+            "synapse": {
+                "title": "Synapse 42 - Modular ERP",
+                "client": "Consulting Firm",
+                "description": "Web application and ERP centralizing comprehensive activity management.",
+                "result": "Adopted at launch"
+            },
+            "syntetica": {
+                "title": "SaaS Data Engineering Platform - Syntetica",
+                "client": "Target: Tech Companies (SaaS, Fintech)",
+                "description": "Instant realistic synthetic dataset generation driven by business logic.",
+                "result": "Codeless generation"
+            },
             "gcp": {
                 "title": "Data Migration to GCP + Power BI Dashboards",
                 "client": "SME logistics sector",
