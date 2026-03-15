@@ -20,12 +20,26 @@ const faqKeys = ['cost', 'timeline', 'remote', 'small'] as const;
 export default function Contact() {
   const { t } = useTranslation('contact');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [openFaq, setOpenFaq] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
+    setIsLoading(true);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
+      });
+      setIsSubmitted(true);
+    } catch (err) {
+      console.error('Erreur envoi formulaire:', err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -80,16 +94,29 @@ export default function Contact() {
                   </p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit}
+                  className="space-y-4"
+                >
+                  {/* Champs cachés requis par Netlify */}
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p hidden><input name="bot-field" /></p>
+
                   <div className="grid sm:grid-cols-2 gap-4">
                     <input
                       type="text"
+                      name="name"
                       required
                       placeholder={t('form.name_placeholder')}
                       className="w-full px-4 py-3 rounded-lg bg-dark border border-border text-white placeholder:text-text-secondary focus:outline-none focus:border-neon transition-colors"
                     />
                     <input
                       type="email"
+                      name="email"
                       required
                       placeholder={t('form.email_placeholder')}
                       className="w-full px-4 py-3 rounded-lg bg-dark border border-border text-white placeholder:text-text-secondary focus:outline-none focus:border-neon transition-colors"
@@ -97,11 +124,13 @@ export default function Contact() {
                   </div>
                   <input
                     type="text"
+                    name="company"
                     placeholder={t('form.company_placeholder')}
                     className="w-full px-4 py-3 rounded-lg bg-dark border border-border text-white placeholder:text-text-secondary focus:outline-none focus:border-neon transition-colors"
                   />
                   <div className="relative">
                     <select
+                      name="subject"
                       className="w-full px-4 py-3 rounded-lg bg-dark border border-border text-text-secondary focus:outline-none focus:border-neon transition-colors appearance-none"
                     >
                       <option value="">{t('form.subject_placeholder')}</option>
@@ -112,6 +141,7 @@ export default function Contact() {
                     <ChevronDown size={18} className="absolute right-4 top-1/2 -translate-y-1/2 text-text-secondary pointer-events-none" />
                   </div>
                   <textarea
+                    name="message"
                     rows={5}
                     required
                     placeholder={t('form.message_placeholder')}
@@ -119,9 +149,10 @@ export default function Contact() {
                   />
                   <button
                     type="submit"
-                    className="btn-primary w-full flex items-center justify-center"
+                    disabled={isLoading}
+                    className="btn-primary w-full flex items-center justify-center disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    {t('form.submit')}
+                    {isLoading ? t('form.sending') : t('form.submit')}
                     <Send size={18} className="ml-2" />
                   </button>
                 </form>
