@@ -12,7 +12,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import ServiceCard from '../components/molecules/ServiceCard/ServiceCard';
 import ProjectCard from '../components/molecules/ProjectCard/ProjectCard';
-import AnimatedCounter from '../components/atoms/AnimatedCounter/AnimatedCounter';
+// import AnimatedCounter from '../components/atoms/AnimatedCounter/AnimatedCounter';
 
 const serviceKeys = [
   { icon: Database, key: 'data_bi', link: '/services#data-bi' },
@@ -23,6 +23,16 @@ const serviceKeys = [
 ];
 
 const projectKeys = [
+  {
+    key: 'synapse',
+    tags: ['Front-office', 'Back-office', 'ERP', 'Dashboard'],
+    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80',
+  },
+  {
+    key: 'syntetica',
+    tags: ['Python', 'FastAPI', 'Next.js', 'AWS', 'Rust'],
+    image: 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?w=800&q=80',
+  },
   {
     key: 'gcp',
     tags: ['BigQuery', 'Dataflow', 'Power BI', 'Python'],
@@ -40,16 +50,13 @@ const projectKeys = [
   },
 ];
 
-const statKeys = [
-  { value: 50, suffix: '+', labelKey: 'projects' },
-  { value: 15, suffix: '+', labelKey: 'clients' },
+/* const statKeys = [
+  { value: 10, suffix: '+', labelKey: 'projects' },
+  { value: 5, suffix: '+', labelKey: 'clients' },
   { value: 99, suffix: '%', labelKey: 'satisfaction' },
   { value: 5, suffix: '', labelKey: 'expertise' },
-];
+]; */
 
-const techStack = [
-  'Power BI', 'GCP', 'Python', 'Airflow', 'Laravel', 'React', 'BigQuery', 'TensorFlow'
-];
 
 export default function Home() {
   const { t } = useTranslation('home');
@@ -123,12 +130,12 @@ export default function Home() {
             >
               <p className="text-text-secondary text-sm mb-6">{t('hero.tech_label')}</p>
               <div className="flex flex-wrap items-center justify-center gap-4">
-                {techStack.map((tech) => (
+                {serviceKeys.map((service) => (
                   <span
-                    key={tech}
+                    key={service.key}
                     className="px-4 py-2 rounded-lg bg-dark-surface border border-border text-text-secondary text-sm font-mono hover:border-neon/50 hover:text-neon transition-colors"
                   >
-                    {tech}
+                    {t(`services.items.${service.key}.title`)}
                   </span>
                 ))}
               </div>
@@ -186,7 +193,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Stats Section 
       <section className="relative py-24 lg:py-32 bg-dark-surface">
         <div className="absolute inset-0 grid-overlay opacity-20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -208,7 +215,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* Projects Section */}
       <section className="relative py-24 lg:py-32">

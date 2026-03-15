@@ -26,9 +26,9 @@ export default function ProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.6, delay: index * 0.15 }}
-      className="group"
+      className="group h-full"
     >
-      <div className="relative overflow-hidden rounded-2xl bg-dark-surface border border-border card-hover">
+      <div className="relative h-full flex flex-col overflow-hidden rounded-2xl bg-dark-surface border border-border card-hover">
         {/* Image */}
         <div className="relative h-56 lg:h-64 overflow-hidden">
           <div
@@ -44,7 +44,7 @@ export default function ProjectCard({
         </div>
 
         {/* Content */}
-        <div className="p-6">
+        <div className="p-6 flex flex-col flex-1">
           <div className="flex items-start justify-between mb-3">
             <div>
               <p className="text-text-secondary text-sm mb-1">{client}</p>
@@ -57,12 +57,12 @@ export default function ProjectCard({
             </div>
           </div>
 
-          <p className="text-text-secondary text-sm leading-relaxed mb-4">
+          <p className="text-text-secondary text-sm leading-relaxed mb-4 flex-1">
             {description}
           </p>
 
           {/* Tags */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 mt-auto">
             {tags.map((tag) => (
               <span
                 key={tag}

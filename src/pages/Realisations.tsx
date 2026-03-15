@@ -4,9 +4,17 @@ import { ArrowUpRight, X } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/atoms/ui/dialog';
 import { useTranslation } from 'react-i18next';
 
-const projectKeys = ['gcp', 'airflow', 'saas', 'analytics_project', 'chatbot', 'warehouse'] as const;
+const projectKeys = ['synapse', 'syntetica', 'gcp', 'airflow', 'saas', 'analytics_project', 'chatbot', 'warehouse'] as const;
 
 const projectAssets: Record<string, { tags: string[]; image: string }> = {
+  synapse: {
+    tags: ['Front-office', 'Back-office', 'ERP', 'Dashboard'],
+    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80',
+  },
+  syntetica: {
+    tags: ['Python', 'FastAPI', 'Next.js', 'AWS', 'Rust', 'Celery'],
+    image: 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?w=800&q=80',
+  },
   gcp: {
     tags: ['BigQuery', 'Dataflow', 'Power BI', 'SQL', 'Python'],
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
@@ -115,10 +123,10 @@ export default function Realisations() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group cursor-pointer"
+                className="group cursor-pointer h-full"
                 onClick={() => setSelectedProjectKey(key)}
               >
-                <div className="relative overflow-hidden rounded-2xl bg-dark border border-border card-hover">
+                <div className="relative h-full flex flex-col overflow-hidden rounded-2xl bg-dark border border-border card-hover">
                   {/* Image */}
                   <div className="relative h-56 overflow-hidden">
                     <div
@@ -139,17 +147,17 @@ export default function Realisations() {
                   </div>
 
                   {/* Content */}
-                  <div className="p-6">
+                  <div className="p-6 flex flex-col flex-1">
                     <p className="text-text-secondary text-sm mb-2">{t(`items.${key}.client`)}</p>
                     <h3 className="text-xl font-heading font-bold text-white mb-3 group-hover:text-neon transition-colors">
                       {t(`items.${key}.title`)}
                     </h3>
-                    <p className="text-text-secondary text-sm leading-relaxed mb-4">
+                    <p className="text-text-secondary text-sm leading-relaxed mb-4 flex-1">
                       {t(`items.${key}.shortDesc`)}
                     </p>
 
                     {/* Tags */}
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mt-auto">
                       {projectAssets[key].tags.slice(0, 3).map((tag) => (
                         <span
                           key={tag}

@@ -21,6 +21,26 @@
         "cta": "Discuss my project"
     },
     "items": {
+        "synapse": {
+            "title": "Synapse 42 - Modular ERP",
+            "client": "Consulting Firm (Luxembourg)",
+            "shortDesc": "Web application and modular ERP specialized for consultants.",
+            "fullDesc": "Platform centralizing consulting activity management tools within a single digital environment. The application offers a novel model of transparency, autonomy, and fair compensation for consultants.",
+            "challenge": "Create a unified digital environment for consultants and administrators, ensuring financial transparency, complete activity tracking, and drastically simplified administrative management.",
+            "solution": "Developed a consultant front-office (time tracking, personal revenue, skills, CV generation) and an administrator back-office (profiles, invoices, referrals) with a strong focus on data reliability and ergonomics.",
+            "result": "Total transparency, tool adopted upon launch",
+            "category": "Development"
+        },
+        "syntetica": {
+            "title": "Syntetica - SaaS Data Engineering Platform",
+            "client": "Target: Fintech, Healthtech, SaaS",
+            "shortDesc": "Business logic-driven generation of synthetic datasets.",
+            "fullDesc": "Syntetica is a SaaS synthetic data generation platform. Users describe their data structure (types, constraints, relationships) via a YAML schema and instantly get an exportable, consistent, and realistic dataset, without a single line of custom code.",
+            "challenge": "Data, QA, and dev teams waste significant time producing realistic test data. Real data is unusable (GDPR, sensitive info) and existing solutions are either too rigid or too technical.",
+            "solution": "Developed an API-first SaaS platform with declarative modeling, a high-performance Faker 2.0 engine based on a Rust KD-Tree, realistic table join simulation, and secure asynchronous generation on AWS.",
+            "result": "Instant codeless complex dataset generation",
+            "category": "Data & BI"
+        },
         "gcp": {
             "title": "Data Migration to GCP + Power BI Dashboards",
             "client": "SME logistics sector",

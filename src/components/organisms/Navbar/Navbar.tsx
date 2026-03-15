@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useScrolled } from '../../../hooks/useScrolled';
 import LanguageSwitcher from '../../molecules/LanguageSwitcher/LanguageSwitcher';
+import logo from '@/assets/logo.png';
 
 const navKeys = [
   { path: '/', key: 'home' },
@@ -40,6 +41,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-1 group">
+              <img src={logo} alt="WareBi Logo" className="w-10 h-10 object-contain" />
               <span className="text-xl lg:text-2xl font-heading font-bold text-white group-hover:text-neon transition-colors">
                 Ware
               </span>
