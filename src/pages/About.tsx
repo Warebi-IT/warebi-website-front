@@ -20,7 +20,7 @@ const team = [
   { name: 'Moussa Marega', role: 'CEO & Fondateur', expertise: 'Business Analysis & Stratégie', initials: 'MM' },
   { name: 'Yann Furrer', role: 'Développeur', expertise: 'Développement & Architecture', initials: 'YF' },
   { name: 'Youssoupha Marega', role: 'Data Analyst & AI', expertise: 'Données & Intelligence Artificielle', initials: 'YM' },
-  { name: 'Yancouba', role: 'Data Analyst', expertise: 'Analyse de données', initials: 'YC' },
+  { name: 'Yancouba', role: 'Data Engineer', expertise: 'Data Engineering', initials: 'YC' },
   { name: 'Idress', role: 'Comptable', expertise: 'Finance & Gestion', initials: 'ID' },
   { name: 'Fouley', role: 'Marketing & Communication', expertise: 'Stratégie & Communication digitale', initials: 'FO' },
 ];
