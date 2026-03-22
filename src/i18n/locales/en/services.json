@@ -1,83 +1,119 @@
 {
-    "hero": {
-        "title": "Complete digital solutions,",
-        "title_highlight": "from data to AI",
-        "subtitle": "Every business is unique. We build the solution that fits your needs exactly."
+  "hero": {
+    "badge": "Our services",
+    "title": "We help your business",
+    "title_highlight": "work smarter, grow faster.",
+    "subtitle": "Concrete solutions built for your reality. No technical jargon — just measurable results."
+  },
+  "what_you_get": "What you get",
+  "result_label": "Concrete result:",
+  "tech_label": "See the technical tools we use",
+  "cta_service": "Discuss this project",
+  "cta_whatsapp": "Write to us on WhatsApp",
+  "items": {
+    "data_bi": {
+      "title": "Dashboards & Business Tracking",
+      "tagline": "Stop making decisions blind. See your business in real time.",
+      "description": "Are you spending hours compiling spreadsheets, calling your team to check on sales, or waiting for month-end to know if you're profitable? We build a custom dashboard that centralizes all your key information — sales, inventory, cash flow, customers — accessible from your phone at a glance.",
+      "features": [
+        "One screen to see the state of your business in real time",
+        "Your key figures updated automatically, without manual re-entry",
+        "Instant alerts when a critical threshold is reached (low stock, overdue payment, sales drop)",
+        "Weekly or monthly reports generated automatically",
+        "Accessible from your phone, tablet or computer"
+      ],
+      "result": "Our clients recover an average of 5 to 10 hours per week by eliminating manual reporting.",
+      "result_short": "Up to 10h/week saved"
     },
-    "technologies_label": "Technologies",
-    "result_label": "Result:",
-    "items": {
-        "data_bi": {
-            "title": "Data & Business Intelligence",
-            "tagline": "Your data has answers. We help you ask the right questions.",
-            "description": "Transform your raw data into actionable insights. We design complete Business Intelligence solutions, from collection to visualization.",
-            "features": [
-                "Data collection, structuring and cleaning",
-                "Analysis and exploitation for decision-making",
-                "Interactive dashboard creation (Power BI, GCP Looker)",
-                "Database migration and integration (PostgreSQL, BigQuery)",
-                "Real-time reporting and KPI monitoring solutions"
-            ],
-            "result": "A client reduced their reporting time by 60% thanks to our automated dashboards."
-        },
-        "dev": {
-            "title": "Software & Web Development",
-            "tagline": "Clean code, applications that last.",
-            "description": "Custom, robust and scalable applications. From architecture to deployment, we build solutions that meet your exact needs.",
-            "features": [
-                "Custom web application design",
-                "Specialized business software development",
-                "API creation and technical integrations",
-                "Responsive mobile and web applications",
-                "Technical architecture and consulting"
-            ],
-            "result": "Development of a complete SaaS platform with integrated leasing model."
-        },
-        "analytics": {
-            "title": "Analytics & Digital Marketing",
-            "tagline": "Every click tells a story. We help you read it.",
-            "description": "Measure, optimize and perform. Our data-driven approach to digital marketing enables informed decisions and improved ROI.",
-            "features": [
-                "Audience measurement and performance analysis",
-                "Marketing campaign tracking and monitoring",
-                "SEO (organic search) and SEA (paid search)",
-                "Marketing reporting and tracking dashboards",
-                "Conversion and ROI optimization"
-            ],
-            "result": "+35% organic traffic in 6 months with a data-driven SEO strategy."
-        },
-        "automation": {
-            "title": "Process Automation",
-            "tagline": "What's repetitive should be automated. Period.",
-            "description": "Eliminate manual tasks and gain efficiency. We design automated pipelines that process your data reliably and at scale.",
-            "features": [
-                "Advanced SQL scripts to automate data processing",
-                "Data pipeline orchestration (Airflow DAGs)",
-                "Flow automation with Dataflow and Cloud Scheduler",
-                "Industrialization of recurring processes",
-                "Quality testing and automated processing monitoring"
-            ],
-            "result": "Complete automation of a data pipeline reducing 20h of manual work to 0."
-        },
-        "ai": {
-            "title": "Artificial Intelligence",
-            "tagline": "AI is not the future. It's now. And we'll take you there.",
-            "description": "Integrate artificial intelligence into your business. From predictive models to chatbots, we develop AI solutions tailored to your needs.",
-            "features": [
-                "AI solutions for business optimization",
-                "Predictive models and advanced analytics",
-                "Intelligent chatbot implementation",
-                "Open-source model integration (Qwen, LLMs)",
-                "Intelligent business process automation",
-                "Machine learning solutions tailored to client needs"
-            ],
-            "result": "Deployment of an AI chatbot handling 70% of level 1 support requests."
-        }
+    "dev": {
+      "title": "Website & Business Application",
+      "tagline": "Your professional online presence or your management tool, built for you.",
+      "description": "You don't have a professional website, or you're running your business with notebooks and spreadsheets? We build websites that inspire trust in your clients, and business applications that replace your improvised tools — deliveries, orders, invoicing, staff management — with a solution designed for your reality.",
+      "features": [
+        "Professional website visible on Google, optimized for mobile",
+        "Custom management application (orders, invoicing, inventory, HR)",
+        "Simple, clear interface — no technical knowledge required",
+        "Full team training included with every project",
+        "Hosting, maintenance and updates handled for you"
+      ],
+      "result": "A transport company replaced their paper folders with an app: zero invoicing errors, deliveries tracked in real time.",
+      "result_short": "Zero invoicing errors"
     },
-    "cta": {
-        "title": "Have a specific need?",
-        "title_highlight": " Let's discuss.",
-        "subtitle": "Every project is unique. Contact us for a free, no-commitment quote.",
-        "button": "Request a free quote"
+    "analytics": {
+      "title": "Digital Presence & Visibility",
+      "tagline": "Your customers are searching for you online. Are you where they look?",
+      "description": "Today, a customer who can't find you online chooses a competitor. We build and manage your digital presence — Google listing, social media, targeted ads — so the right customers find you, without you having to manage everything yourself.",
+      "features": [
+        "Creation and optimization of your Google Business listing (appear in local searches)",
+        "Social media management (Facebook, Instagram, LinkedIn)",
+        "Targeted ads to reach your ideal customers in your service area",
+        "Clear monthly report: how many people saw, contacted, and visited you",
+        "Content strategy tailored to your sector and budget"
+      ],
+      "result": "A Dakar restaurant tripled its online bookings in 4 months through our local visibility strategy.",
+      "result_short": "×3 bookings in 4 months"
+    },
+    "automation": {
+      "title": "Time Savings & Automation",
+      "tagline": "What you do by hand every week can be done automatically.",
+      "description": "Customer follow-ups, invoice sending, inventory updates, weekly reports… These repetitive tasks drain your time and generate errors. We identify the friction points in your organization and set up automations that do the work for you — even while you sleep.",
+      "features": [
+        "Audit of time-consuming and repetitive tasks in your organization",
+        "Automatic follow-up for overdue customer payments",
+        "Automatic sending of invoices, receipts and order confirmations",
+        "Synchronization between your tools (WhatsApp, email, inventory management)",
+        "Gradual setup that doesn't disrupt your current operations"
+      ],
+      "result": "A distribution company saved 20 hours of work per week by automating their follow-ups and delivery reports.",
+      "result_short": "20h/week recovered"
+    },
+    "ai": {
+      "title": "Artificial Intelligence & Assistants",
+      "tagline": "AI is not just for large companies. It's for you, right now.",
+      "description": "An assistant available 24/7 to answer your clients on WhatsApp, a tool that anticipates your stock shortages, a system that detects anomalies in your sales… AI allows your business to do more with the same team. We guide you step by step, with solutions adapted to your size and your budget.",
+      "features": [
+        "WhatsApp or web assistant to answer clients at any hour, without hiring",
+        "Sales forecasting tool and stock need anticipation",
+        "Automatic anomaly detection (fraud, error, abnormal revenue drop)",
+        "AI assistant to draft your quotes, letters and reports faster",
+        "Training your teams to use AI in their daily work"
+      ],
+      "result": "A retail shop now handles 70% of customer requests automatically via WhatsApp — without hiring an additional person.",
+      "result_short": "70% of requests handled automatically"
     }
+  },
+  "faq": {
+    "title": "Your questions,",
+    "title_highlight": " our answers.",
+    "items": [
+      {
+        "q": "Are your solutions adapted to an SME budget?",
+        "a": "Yes. We work with businesses of all sizes, including very small companies with modest budgets. We always start by understanding your priorities and your investment capacity to propose a progressive solution — you only pay for what is useful to you. We can also arrange payment in installments."
+      },
+      {
+        "q": "How long does it take to see the first results?",
+        "a": "For a dashboard or a simple automation, you see results within the first 2 to 4 weeks. For a website or an application, the timeline varies between 4 and 12 weeks depending on complexity. We establish a precise schedule at the start of every project."
+      },
+      {
+        "q": "Do I need any technical knowledge?",
+        "a": "No, none at all. We design all our solutions for non-technical users. Every delivery includes full training for you and your team. We also remain available after delivery to support you."
+      },
+      {
+        "q": "What happens after the project is delivered?",
+        "a": "We don't disappear after delivery. Depending on your project, we offer a monthly maintenance contract that includes fixes, updates and fast support. You can also contact us on an ad-hoc basis to evolve your solution."
+      },
+      {
+        "q": "Do you work with companies from all sectors?",
+        "a": "Yes. We have worked with businesses in retail, logistics, food service, agriculture, financial services, and many others. Our approach always adapts to your industry and your specific constraints."
+      }
+    ]
+  },
+  "cta": {
+    "title": "You have a concrete problem?",
+    "title_highlight": " We have a solution.",
+    "subtitle": "First call is free. We analyze your situation and propose a solution adapted to your budget — with no commitment.",
+    "button": "Let's discuss your project",
+    "whatsapp": "Write on WhatsApp",
+    "no_commitment": "First call 100% free and with no commitment"
+  }
 }

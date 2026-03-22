@@ -1,0 +1,10 @@
+
+
+Pour lancer le projet et voir l'UI, 
+vous devez d'abord installer Node.js (qui inclut npm) 
+depuis https://nodejs.org/. Une fois installé, 
+ouvrez un terminal dans le dossier du projet et exécutez :
+
+1. `npm install` (pour installer les dépendances)
+2. `npm run dev` (pour démarrer le serveur de développement, 
+généralement sur http://localhost:5173)

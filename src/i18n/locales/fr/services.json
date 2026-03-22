@@ -1,83 +1,119 @@
 {
-    "hero": {
-        "title": "Des solutions digitales complètes,",
-        "title_highlight": "de la data à l'IA",
-        "subtitle": "Chaque entreprise est unique. On construit la solution qui correspond exactement à vos besoins."
+  "hero": {
+    "badge": "Nos services",
+    "title": "Nous aidons votre entreprise à",
+    "title_highlight": "travailler mieux, vendre plus.",
+    "subtitle": "Des solutions concrètes, adaptées à votre réalité. Pas de jargon technique — juste des résultats mesurables."
+  },
+  "what_you_get": "Ce que vous obtenez",
+  "result_label": "Résultat concret :",
+  "tech_label": "Voir les outils techniques utilisés",
+  "cta_service": "Discuter de ce projet",
+  "cta_whatsapp": "Nous écrire sur WhatsApp",
+  "items": {
+    "data_bi": {
+      "title": "Tableaux de bord & Pilotage",
+      "tagline": "Arrêtez de décider à l'aveugle. Voyez votre entreprise en temps réel.",
+      "description": "Vous passez des heures à compiler des chiffres dans Excel, à appeler vos équipes pour connaître l'état des ventes, ou à attendre la fin du mois pour savoir si vous êtes rentable ? Nous créons un tableau de bord sur mesure qui centralise toutes vos informations clés — ventes, stocks, trésorerie, clients — accessible depuis votre téléphone en un clin d'œil.",
+      "features": [
+        "Un écran unique pour voir l'état de votre activité en temps réel",
+        "Vos chiffres mis à jour automatiquement, sans ressaisie manuelle",
+        "Alertes instantanées quand un seuil est atteint (stock bas, impayé, baisse de ventes)",
+        "Rapports hebdomadaires ou mensuels générés automatiquement",
+        "Accessible depuis votre téléphone, tablette ou ordinateur"
+      ],
+      "result": "Nos clients récupèrent en moyenne 5 à 10 heures par semaine grâce à la suppression des rapports manuels.",
+      "result_short": "Jusqu'à 10h/semaine économisées"
     },
-    "technologies_label": "Technologies",
-    "result_label": "Résultat :",
-    "items": {
-        "data_bi": {
-            "title": "Data & Business Intelligence",
-            "tagline": "Vos données ont des réponses. On vous aide à poser les bonnes questions.",
-            "description": "Transformez vos données brutes en insights actionnables. Nous concevons des solutions de Business Intelligence complètes, de la collecte à la visualisation.",
-            "features": [
-                "Collecte, structuration et nettoyage des données",
-                "Analyse et exploitation pour la prise de décision",
-                "Création de tableaux de bord interactifs (Power BI, GCP Looker)",
-                "Migration et intégration de bases de données (PostgreSQL, BigQuery)",
-                "Solutions de reporting et suivi des KPI en temps réel"
-            ],
-            "result": "Un client a réduit de 60% son temps de reporting grâce à nos dashboards automatisés."
-        },
-        "dev": {
-            "title": "Développement Logiciel & Web",
-            "tagline": "Du code propre, des applications qui durent.",
-            "description": "Des applications sur mesure, robustes et scalables. De l'architecture à la mise en production, nous construisons des solutions qui répondent exactement à vos besoins.",
-            "features": [
-                "Conception d'applications web sur mesure",
-                "Développement de logiciels métier spécialisés",
-                "Création d'API et intégrations techniques",
-                "Applications mobiles et web responsive",
-                "Architecture technique et conseil"
-            ],
-            "result": "Développement d'une plateforme SaaS complète avec modèle de leasing intégré."
-        },
-        "analytics": {
-            "title": "Analytics & Marketing Digital",
-            "tagline": "Chaque clic raconte une histoire. On vous aide à la lire.",
-            "description": "Mesurez, optimisez et performez. Notre approche data-driven du marketing digital vous permet de prendre des décisions éclairées et d'améliorer votre ROI.",
-            "features": [
-                "Mesure d'audience et analyse de performance",
-                "Tracking et monitoring des campagnes marketing",
-                "SEO (référencement naturel) et SEA (publicité en ligne)",
-                "Reporting marketing et tableaux de bord de suivi",
-                "Optimisation des conversions et du ROI"
-            ],
-            "result": "+35% de trafic organique en 6 mois grâce à une stratégie SEO data-driven."
-        },
-        "automation": {
-            "title": "Automatisation de Processus",
-            "tagline": "Ce qui est répétitif devrait être automatisé. Point.",
-            "description": "Éliminez les tâches manuelles et gagnez en efficacité. Nous concevons des pipelines automatisés qui traitent vos données de manière fiable et scalable.",
-            "features": [
-                "Scripts SQL avancés pour automatiser les traitements de données",
-                "Orchestration de pipelines de données (DAGs Airflow)",
-                "Automatisation des flux avec Dataflow et Cloud Scheduler",
-                "Industrialisation des processus récurrents",
-                "Tests qualité et monitoring des traitements automatisés"
-            ],
-            "result": "Automatisation complète d'un pipeline data réduisant 20h de travail manuel à 0."
-        },
-        "ai": {
-            "title": "Intelligence Artificielle",
-            "tagline": "L'IA n'est pas le futur. C'est maintenant. Et on vous y emmène.",
-            "description": "Intégrez l'intelligence artificielle dans votre business. Des modèles prédictifs aux chatbots, nous développons des solutions IA adaptées à vos besoins.",
-            "features": [
-                "Implémentation de solutions IA pour l'optimisation business",
-                "Modèles prédictifs et analytics avancés",
-                "Mise en place de chatbots intelligents",
-                "Intégration de modèles open-source (Qwen, LLMs)",
-                "Automatisation intelligente des processus métier",
-                "Solutions de machine learning adaptées aux besoins clients"
-            ],
-            "result": "Déploiement d'un chatbot IA qui gère 70% des demandes support de niveau 1."
-        }
+    "dev": {
+      "title": "Site Web & Application Métier",
+      "tagline": "Votre vitrine en ligne ou votre outil de gestion, fait sur mesure pour vous.",
+      "description": "Vous n'avez pas de site web professionnel, ou vous gérez votre activité avec des cahiers et des tableurs ? Nous concevons des sites vitrines qui inspirent confiance à vos clients, et des applications métier qui remplacent vos outils bricolés — livraisons, commandes, facturation, gestion du personnel — par une solution pensée pour votre réalité.",
+      "features": [
+        "Site web professionnel visible sur Google, adapté aux mobiles",
+        "Application de gestion sur mesure (commandes, facturation, stock, RH)",
+        "Interface simple et claire — aucune connaissance technique requise",
+        "Formation complète de vos équipes incluse dans chaque projet",
+        "Hébergement, maintenance et évolutions pris en charge"
+      ],
+      "result": "Une PME de transport a remplacé ses classeurs papier par une application : zéro erreur de facturation, livraisons suivies en temps réel.",
+      "result_short": "Zéro erreur de facturation"
     },
-    "cta": {
-        "title": "Un besoin spécifique ?",
-        "title_highlight": " On en discute.",
-        "subtitle": "Chaque projet est unique. Contactez-nous pour un devis gratuit et sans engagement.",
-        "button": "Demander un devis gratuit"
+    "analytics": {
+      "title": "Présence Digitale & Visibilité",
+      "tagline": "Vos clients vous cherchent en ligne. Êtes-vous là où ils regardent ?",
+      "description": "Aujourd'hui, un client qui ne vous trouve pas sur internet choisit un concurrent. Nous construisons et gérons votre présence digitale : fiche Google, réseaux sociaux, publicités ciblées — pour que les bons clients vous trouvent, sans que vous ayez à tout gérer vous-même.",
+      "features": [
+        "Création et optimisation de votre fiche Google (apparaître dans les recherches locales)",
+        "Gestion de vos réseaux sociaux (Facebook, Instagram, LinkedIn)",
+        "Publicités ciblées pour atteindre vos clients à Dakar ou dans toutes vos zones de chalandise",
+        "Rapport mensuel clair : combien de personnes vous ont vu, contacté, visité",
+        "Stratégie de contenu adaptée à votre secteur et à votre budget"
+      ],
+      "result": "Un restaurant de Dakar a multiplié par 3 ses réservations en 4 mois grâce à notre stratégie de visibilité locale.",
+      "result_short": "×3 réservations en 4 mois"
+    },
+    "automation": {
+      "title": "Gain de Temps & Automatisation",
+      "tagline": "Ce que vous faites à la main chaque semaine peut être fait automatiquement.",
+      "description": "Relances clients, envoi de factures, mise à jour des stocks, rapports hebdomadaires… Ces tâches répétitives consomment du temps et génèrent des erreurs. Nous identifions les points de friction dans votre organisation et mettons en place des automatisations qui font le travail à votre place — même quand vous dormez.",
+      "features": [
+        "Audit des tâches chronophages et répétitives dans votre organisation",
+        "Relances automatiques des clients en retard de paiement",
+        "Envoi automatique de factures, reçus et confirmations de commande",
+        "Synchronisation entre vos outils (WhatsApp, email, gestion de stock)",
+        "Mise en place progressive, sans perturber votre activité en cours"
+      ],
+      "result": "Une société de distribution a économisé 20 heures de travail par semaine en automatisant ses relances et ses rapports de livraison.",
+      "result_short": "20h/semaine récupérées"
+    },
+    "ai": {
+      "title": "Intelligence Artificielle & Assistants",
+      "tagline": "L'IA n'est pas réservée aux grandes entreprises. Elle est pour vous, maintenant.",
+      "description": "Un assistant disponible 24h/24 pour répondre à vos clients sur WhatsApp, un outil qui anticipe vos ruptures de stock, un système qui détecte les anomalies dans vos ventes… L'intelligence artificielle permet à votre entreprise de faire plus avec les mêmes équipes. Nous vous accompagnons pas à pas, avec des solutions adaptées à votre taille et à votre budget.",
+      "features": [
+        "Assistant WhatsApp ou web pour répondre à vos clients à toute heure, sans recruter",
+        "Outil de prévision des ventes et anticipation des besoins en stock",
+        "Détection automatique des anomalies (fraude, erreur, baisse anormale de chiffre)",
+        "Assistant IA pour rédiger vos devis, courriers et rapports plus vite",
+        "Formation de vos équipes à l'utilisation de l'IA au quotidien"
+      ],
+      "result": "Une boutique traite désormais 70% de ses demandes clients automatiquement via WhatsApp — sans recruter une personne supplémentaire.",
+      "result_short": "70% des demandes gérées automatiquement"
     }
+  },
+  "faq": {
+    "title": "Vos questions,",
+    "title_highlight": " nos réponses.",
+    "items": [
+      {
+        "q": "Est-ce que vos solutions sont adaptées à mon budget de PME ?",
+        "a": "Oui. Nous travaillons avec des entreprises de toutes tailles, y compris des TPE et PME avec des budgets modestes. Nous commençons toujours par comprendre vos priorités et votre capacité d'investissement pour proposer une solution progressive — vous ne payez que ce qui vous est utile. Nous pouvons aussi mettre en place un paiement échelonné."
+      },
+      {
+        "q": "Combien de temps faut-il pour voir les premiers résultats ?",
+        "a": "Pour un tableau de bord ou une automatisation simple, vous voyez des résultats dès les 2 à 4 premières semaines. Pour un site web ou une application, le délai varie entre 4 et 12 semaines selon la complexité. Nous établissons un planning précis dès le début du projet."
+      },
+      {
+        "q": "Est-ce que je dois avoir des connaissances techniques ?",
+        "a": "Non, aucune. Nous concevons toutes nos solutions pour des non-techniciens. Chaque livraison inclut une formation complète pour vous et vos équipes. Nous restons également disponibles après la livraison pour vous accompagner."
+      },
+      {
+        "q": "Que se passe-t-il après la livraison du projet ?",
+        "a": "Nous ne disparaissons pas après la livraison. Selon votre projet, nous proposons un contrat de maintenance mensuel qui inclut les corrections, les mises à jour et une assistance rapide. Vous pouvez aussi nous contacter ponctuellement pour faire évoluer votre solution."
+      },
+      {
+        "q": "Travaillez-vous avec des entreprises de tous les secteurs ?",
+        "a": "Oui. Nous avons accompagné des entreprises dans le commerce, la logistique, la restauration, l'agriculture, les services financiers, et bien d'autres. Notre approche s'adapte toujours à votre secteur d'activité et à vos contraintes spécifiques."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Vous avez un problème concret ?",
+    "title_highlight": " Nous avons une solution.",
+    "subtitle": "Premier échange gratuit. Nous analysons votre situation et vous proposons une solution adaptée à votre budget — sans engagement.",
+    "button": "Discutons de votre projet",
+    "whatsapp": "Écrire sur WhatsApp",
+    "no_commitment": "Premier échange 100% gratuit et sans engagement"
+  }
 }
