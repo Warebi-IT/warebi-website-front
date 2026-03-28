@@ -71,9 +71,9 @@
         "powerbi": "Certifié Power BI",
         "ovh": "Programme Startup OVH",
         "aws": "Programme Startup AWS",
-        "brenacaire": "Groupe Brenacaire",
-        "arkea": "Arkea",
-        "cmso": "Crédit Mutuel Sud Ouest",
-        "canada": "ESN Canada"
+        "brenacaire": "Groupe Bancaire",
+        "arkea": "Automobile",
+        "cmso": "Télécommunication",
+        "canada": "ESN & Startups"
     }
 }
