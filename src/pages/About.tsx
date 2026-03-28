@@ -17,12 +17,12 @@ const valueKeys = [
 const processKeys = ['understand', 'build', 'measure', 'support'] as const;
 
 const team = [
-  { name: 'Moussa Marega', role: 'CEO & Fondateur', expertise: 'Business Analysis & Stratégie', initials: 'MM' },
-  { name: 'Yann Furrer', role: 'Développeur', expertise: 'Développement & Architecture', initials: 'YF' },
-  { name: 'Youssoupha Marega', role: 'Data Analyst & AI', expertise: 'Données & Intelligence Artificielle', initials: 'YM' },
-  { name: 'Yancouba', role: 'Data Engineer', expertise: 'Data Engineering', initials: 'YC' },
-  { name: 'Idress', role: 'Comptable', expertise: 'Finance & Gestion', initials: 'ID' },
-  { name: 'Fouley', role: 'Marketing & Communication', expertise: 'Stratégie & Communication digitale', initials: 'FO' },
+  { name: 'Moussa MAREGA', role: 'CEO & Fondateur', expertise: 'Business Analysis & Stratégie', initials: 'MM' },
+  { name: 'Yann FURRER', role: 'Développeur', expertise: 'Développement & Architecture', initials: 'YF' },
+  { name: 'Youssoupha MAREGA', role: 'Data Analyst & AI', expertise: 'Données & Intelligence Artificielle', initials: 'YM' },
+  { name: 'Yancouba DIATTA', role: 'Data Engineer', expertise: 'Data & Développement & Architecture  ', initials: 'YC' },
+  { name: 'Idrissa Sikoula ADULA', role: 'Comptable', expertise: 'Finance & Gestion', initials: 'ID' },
+  { name: 'Fouleymata DOUCOURE', role: 'Marketing & Communication', expertise: 'Stratégie & Communication digitale', initials: 'FO' },
 ];
 
 const referenceKeys = ['brenacaire', 'arkea', 'cmso', 'canada'];
