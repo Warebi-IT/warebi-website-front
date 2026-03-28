@@ -17,6 +17,7 @@
         "message": "Message *",
         "message_placeholder": "Décrivez votre projet ou vos besoins...",
         "submit": "Envoyer le message",
+        "sending": "Envoi en cours...",
         "success_title": "Message envoyé !",
         "success_message": "On vous répond dans les 24h ouvrées."
     },

@@ -17,6 +17,7 @@
         "message": "Message *",
         "message_placeholder": "Describe your project or needs...",
         "submit": "Send message",
+        "sending": "Sending...",
         "success_title": "Message sent!",
         "success_message": "We'll get back to you within 24 business hours."
     },

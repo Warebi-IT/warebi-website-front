@@ -30,7 +30,7 @@ export default function ParticleBackground() {
     window.addEventListener('resize', resizeCanvas);
 
     // Initialize particles
-    const particleCount = Math.min(30, Math.floor(window.innerWidth / 50));
+    const particleCount = Math.min(30, Math.floor(window.innerWidth));
     particlesRef.current = Array.from({ length: particleCount }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
