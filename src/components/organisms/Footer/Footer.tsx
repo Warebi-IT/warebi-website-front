@@ -13,7 +13,7 @@ const navKeys = [
   { path: '/a-propos', key: 'about' },
   { path: '/services', key: 'services' },
   { path: '/realisations', key: 'realisations' },
-  { path: '/blog', key: 'blog' },
+  // { path: '/blog', key: 'blog' },
   { path: '/contact', key: 'contact' },
 ] as const;
 
